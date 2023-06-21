@@ -133,7 +133,7 @@ export class TowerPhysicalElementService {
         console.log("Processing Antennas")
         if (this.data['AntennaProperties']) {
             for (const antennaIndex of Object.keys(this.data['AntennaProperties'])) {
-                const antennaProperty = this.data['AntennaProperties'][antennaIndex];
+                let antennaProperty = this.data['AntennaProperties'][antennaIndex];
                 const definitaionModelId = queryDefinitionModel(this.synchronizer, this.jobSubject);
                 const physicalModelId = queryPhysicalModel(this.synchronizer, this.jobSubject);
 
@@ -146,48 +146,53 @@ export class TowerPhysicalElementService {
                 });
 
                 if (antennaElement.length > 0) {
-                    let MountProperty: any = null;
-                    if(this.data['MountProperties']) {
-                        MountProperty = this.data['MountProperties'].find((mountProperty: any) => {
-                            return mountProperty['ID'] === antennaElement[0]['elements'][0]['MountID'];
-                        });
-                    }
+                    // let MountProperty: any = null;
+                    // if(this.data['MountProperties']) {
+                    //     MountProperty = this.data['MountProperties'].find((mountProperty: any) => {
+                    //         return mountProperty['ID'] === antennaElement[0]['elements'][0]['MountID'];
+                    //     });
+                    // }
 
-                    if (MountProperty) {
-                        const Location = MountProperty['Location'];
-                        const Azimuth = MountProperty['Azimuth'] * 1;
-
-
-                        let legLocation = 0;
-                        if (noOfLegs == 3) {
-                            if (Location === 'LegA') {
-                                legLocation = 60;
-
-                            } else if (Location === 'LegB') {
-                                legLocation = 180; // 45 + 90;
-                            } else if (Location === 'LegC') {
-                                legLocation = 300; // 45 + 90 + 90;
-                            }
-                        } else {
-                            if (Location === 'LegA') {
-                                legLocation = 45;
-
-                            } else if (Location === 'LegB') {
-                                legLocation = 135; // 45 + 90;
-                            } else if (Location === 'LegC') {
-                                legLocation = 225; // 45 + 90 + 90;
-                            } else if (Location === 'LegD') {
-                                legLocation = 315; // 45 + 90 + 90 + 90;
-                            }
-                        }
+                    // if (MountProperty) {
+                    //     const Location = MountProperty['Location'];
+                    //     const Azimuth = MountProperty['Azimuth'] * 1;
 
 
-                        const antennaAzmith = (legLocation + Azimuth) * -1;
+                    //     let legLocation = 0;
+                    //     if (noOfLegs == 3) {
+                    //         if (Location === 'LegA') {
+                    //             legLocation = 60;
 
-                        antennaProperty['AntennaAzmith'] = antennaAzmith;
-                    } else {
-                        antennaProperty['AntennaAzmith'] = antennaProperty['Azimuth'];
-                    }
+                    //         } else if (Location === 'LegB') {
+                    //             legLocation = 180; // 45 + 90;
+                    //         } else if (Location === 'LegC') {
+                    //             legLocation = 300; // 45 + 90 + 90;
+                    //         }
+                    //     } else {
+                    //         if (Location === 'LegA') {
+                    //             legLocation = 45;
+
+                    //         } else if (Location === 'LegB') {
+                    //             legLocation = 135; // 45 + 90;
+                    //         } else if (Location === 'LegC') {
+                    //             legLocation = 225; // 45 + 90 + 90;
+                    //         } else if (Location === 'LegD') {
+                    //             legLocation = 315; // 45 + 90 + 90 + 90;
+                    //         }
+                    //     }
+
+
+                    //     const antennaAzmith = (legLocation + Azimuth) * -1;
+
+                    //     antennaProperty['AntennaAzmith'] = antennaAzmith;
+                    // } else {
+                    //     antennaProperty['AntennaAzmith'] = antennaProperty['Azimuth'];
+                    // }
+                    antennaProperty['AntennaAzmith'] = 0;
+                    antennaProperty['Azimuth'] = 0;
+
+                    console.log("antennaProperty");
+                    console.log(JSON.stringify(antennaProperty));
 
 
                     if (antennaElement) {
