@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DeleteChangeSet>
+
+    <Elements>
+        <Element ID="0x200000001e3"></Element>
+        <Element ID="0x30000000004"></Element>
+        <Element ID="0x50000000003"></Element>
+        <Element ID="0x50000000004"></Element>
+    </Elements>
+    
+    
+</DeleteChangeSet>

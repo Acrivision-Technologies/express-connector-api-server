@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Staad>
+<TowerInformation TowerID="xxxxx" ComponentName="TowerInformation" SourceAppElementId="xxxxx" Label="Tower Information" TowerName="xxxxxx" Description="xxxxxx" UnitSystem="English" Convention="True" BearingAngle="xxxxx" TowerType="SelfSupported" TowerHeight="194.3333" TopFaceWidth="11.8516" TopFaceDepth="11.8516" BottomFaceWidth="29.6667" BottomFaceDepth="29.6667" NoofPanel="10" NoOfLegs="3"/>
+    <Sections>
+		<Section ID="1" Name="HollowCircleProfile" Radius="0.02804414" WallThickness="0.0208333333333333" />
+		<Section ID="2" Name="HollowCircleProfile" Radius="0.01825625" WallThickness="0.0208333333333333" />
+		<Section ID="3" Name="HollowCircleProfile" Radius="0.03439414" WallThickness="0.03125" />
+		<Section ID="4" Name="HollowCircleProfile" Radius="0.04087622" WallThickness="0.03125" />
+		<Section ID="5" Name="LShapeProfile" Width="0.04445" Depth="0.04445" Thickness="0.0047625" FilletRadius="0" EdgeRadius="0" />
+	</Sections>
+	<AntennaProperties>
+		<AntennaProperty ID="1" Label="APXVSPP18-C-A20" Name="APXVSPP18-C-A20" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="APXVSPP18-C-A20" Location="LegA" Type="PANEL" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="72.0" Width="11.8" Depth="7.9" Weight="69.5" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_1"/>
+		<AntennaProperty ID="2" Label="P40-16-XLPP-RR-A" Name="P40-16-XLPP-RR-A" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="P40-16-XLPP-RR-A" Location="LegA" Type="PANEL" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="54.0" Width="20.0" Depth="6.5" Weight="53.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_2"/>
+		<AntennaProperty ID="3" Label="APXVSPP18-C-A20" Name="APXVSPP18-C-A20" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="APXVSPP18-C-A20" Location="LegB" Type="PANEL" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="72.0" Width="11.8" Depth="7.9" Weight="69.5" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_3"/>
+		<AntennaProperty ID="4" Label="PCS 1900MHZ 4X45W-65MHZ" Name="PCS 1900MHZ 4X45W-65MHZ" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="PCS 1900MHZ 4X45W-65MHZ" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.0" Width="11.1" Depth="10.7" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_4"/>
+		<AntennaProperty ID="5" Label="PCS 1900MHZ 4X45W-65MHZ" Name="PCS 1900MHZ 4X45W-65MHZ" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="PCS 1900MHZ 4X45W-65MHZ" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.0" Width="11.1" Depth="10.7" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_5"/>
+		<AntennaProperty ID="6" Label="PCS 1900MHZ 4X45W-65MHZ" Name="PCS 1900MHZ 4X45W-65MHZ" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="PCS 1900MHZ 4X45W-65MHZ" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.0" Width="11.1" Depth="10.7" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_6"/>
+		<AntennaProperty ID="7" Label="APXV9TM14-C-120" Name="APXV9TM14-C-120" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="APXV9TM14-C-120" Location="LegA" Type="PANEL" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="55.1" Width="11.8" Depth="5.91" Weight="53.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_7"/>
+		<AntennaProperty ID="8" Label="APXV9TM14-C-120" Name="APXV9TM14-C-120" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="APXV9TM14-C-120" Location="LegB" Type="PANEL" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="55.1" Width="11.8" Depth="5.91" Weight="53.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_8"/>
+		<AntennaProperty ID="9" Label="APXV9TM14-C-120" Name="APXV9TM14-C-120" Elevation="190.0" Manufacturer="RFS/CELWAVE" ModelName="APXV9TM14-C-120" Location="LegB" Type="PANEL" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="55.1" Width="11.8" Depth="5.91" Weight="53.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_9"/>
+		<AntennaProperty ID="10" Label="TD-RRH8X20-25" Name="TD-RRH8X20-25" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="TD-RRH8X20-25" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.4" Width="17.5" Depth="5.7" Weight="66.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_10"/>
+		<AntennaProperty ID="11" Label="TD-RRH8X20-25" Name="TD-RRH8X20-25" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="TD-RRH8X20-25" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.4" Width="17.5" Depth="5.7" Weight="66.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_11"/>
+		<AntennaProperty ID="12" Label="TD-RRH8X20-25" Name="TD-RRH8X20-25" Elevation="190.0" Manufacturer="ALCATEL LUCENT" ModelName="TD-RRH8X20-25" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="0.0" Height="25.4" Width="17.5" Depth="5.7" Weight="66.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_12"/>
+	</AntennaProperties>
+	<AntennaNodes>
+		<AntennaNode ID="1" X="-3.0169589787396673" Y="56.995599999999996" Z="1.7400424311615066"/>
+		<AntennaNode ID="2" X="-3.0169589787396673" Y="58.8244" Z="1.7400424311615066"/>
+		<AntennaNode ID="3" X="-3.001548526811119" Y="57.224199999999996" Z="1.7311741522214927"/>
+		<AntennaNode ID="4" X="-3.001548526811119" Y="58.5958" Z="1.7311741522214927"/>
+		<AntennaNode ID="5" X="0.0" Y="56.995599999999996" Z="-3.48033"/>
+		<AntennaNode ID="6" X="0.0" Y="58.8244" Z="-3.48033"/>
+		<AntennaNode ID="7" X="-3.0477798825967644" Y="57.592499999999994" Z="1.757778989041534"/>
+		<AntennaNode ID="8" X="-3.0477798825967644" Y="58.2275" Z="1.757778989041534"/>
+		<AntennaNode ID="9" X="-3.0477798825967644" Y="57.592499999999994" Z="1.757778989041534"/>
+		<AntennaNode ID="10" X="-3.0477798825967644" Y="58.2275" Z="1.757778989041534"/>
+		<AntennaNode ID="11" X="0.0" Y="57.592499999999994" Z="-3.5158899999999997"/>
+		<AntennaNode ID="12" X="0.0" Y="58.2275" Z="-3.5158899999999997"/>
+		<AntennaNode ID="13" X="-2.995054122069802" Y="57.210229999999996" Z="1.7274368060967726"/>
+		<AntennaNode ID="14" X="-2.995054122069802" Y="58.60977" Z="1.7274368060967726"/>
+		<AntennaNode ID="15" X="0.0" Y="57.210229999999996" Z="-3.455057"/>
+		<AntennaNode ID="16" X="0.0" Y="58.60977" Z="-3.455057"/>
+		<AntennaNode ID="17" X="0.0" Y="57.210229999999996" Z="-3.455057"/>
+		<AntennaNode ID="18" X="0.0" Y="58.60977" Z="-3.455057"/>
+		<AntennaNode ID="19" X="-2.9927425542805195" Y="57.587419999999995" Z="1.7261065642557705"/>
+		<AntennaNode ID="20" X="-2.9927425542805195" Y="58.23258" Z="1.7261065642557705"/>
+		<AntennaNode ID="21" X="0.0" Y="57.587419999999995" Z="-3.45239"/>
+		<AntennaNode ID="22" X="0.0" Y="58.23258" Z="-3.45239"/>
+		<AntennaNode ID="23" X="0.0" Y="57.587419999999995" Z="-3.45239"/>
+		<AntennaNode ID="24" X="0.0" Y="58.23258" Z="-3.45239"/>
+		<AntennaNode ID="25" X="-2.6398411075604002" Y="53.20411" Z="1.5168911929587172"/>
+		<AntennaNode ID="26" X="-2.6398411075604002" Y="53.47589000000001" Z="1.5168911929587172"/>
+		<AntennaNode ID="27" X="2.6398411075604002" Y="53.20411" Z="1.5168911929587172"/>
+		<AntennaNode ID="28" X="2.6398411075604002" Y="53.47589000000001" Z="1.5168911929587172"/>
+		<AntennaNode ID="29" X="-2.7293644302416014" Y="53.0733" Z="1.5675647718348689"/>
+		<AntennaNode ID="30" X="-2.7293644302416014" Y="53.606700000000004" Z="1.5675647718348689"/>
+		<AntennaNode ID="31" X="0.0" Y="53.0733" Z="-3.14716"/>
+		<AntennaNode ID="32" X="0.0" Y="53.606700000000004" Z="-3.14716"/>
+		<AntennaNode ID="33" X="2.7293644302416014" Y="53.0733" Z="1.5675647718348689"/>
+		<AntennaNode ID="34" X="2.7293644302416014" Y="53.606700000000004" Z="1.5675647718348689"/>
+		<AntennaNode ID="35" X="-2.688471060621793" Y="52.114450000000005" Z="1.5444175814840342"/>
+		<AntennaNode ID="36" X="-2.688471060621793" Y="54.56555" Z="1.5444175814840342"/>
+		<AntennaNode ID="37" X="0.0" Y="52.114450000000005" Z="-3.10017"/>
+		<AntennaNode ID="38" X="0.0" Y="54.56555" Z="-3.10017"/>
+		<AntennaNode ID="39" X="2.688471060621793" Y="52.114450000000005" Z="1.5444175814840342"/>
+		<AntennaNode ID="40" X="2.688471060621793" Y="54.56555" Z="1.5444175814840342"/>
+		<AntennaNode ID="41" X="-2.6883605380011995" Y="53.084984000000006" Z="1.544355021510113"/>
+		<AntennaNode ID="42" X="-2.6883605380011995" Y="53.595016" Z="1.544355021510113"/>
+		<AntennaNode ID="43" X="0.0" Y="53.08981" Z="-3.11414"/>
+		<AntennaNode ID="44" X="0.0" Y="53.59019000000001" Z="-3.11414"/>
+		<AntennaNode ID="45" X="2.6883605380011995" Y="53.084984000000006" Z="1.544355021510113"/>
+		<AntennaNode ID="46" X="2.6883605380011995" Y="53.595016" Z="1.544355021510113"/>
+		<AntennaNode ID="47" X="-2.731574882653483" Y="53.0352" Z="1.5688159713132923"/>
+		<AntennaNode ID="48" X="-2.731574882653483" Y="53.644800000000004" Z="1.5688159713132923"/>
+		<AntennaNode ID="49" X="0.0" Y="53.20411" Z="-3.0442899999999997"/>
+		<AntennaNode ID="50" X="0.0" Y="53.47589000000001" Z="-3.0442899999999997"/>
+		<AntennaNode ID="51" X="0.0" Y="53.0352" Z="-3.1496999999999997"/>
+		<AntennaNode ID="52" X="0.0" Y="53.644800000000004" Z="-3.1496999999999997"/>
+		<AntennaNode ID="53" X="-3.300198724428616" Y="49.3756" Z="1.9075440208585295"/>
+		<AntennaNode ID="54" X="-3.300198724428616" Y="51.2044" Z="1.9075440208585295"/>
+		<AntennaNode ID="55" X="0.0" Y="49.6804" Z="-3.8308"/>
+		<AntennaNode ID="56" X="0.0" Y="50.8996" Z="-3.8308"/>
+		<AntennaNode ID="57" X="3.313925417350714" Y="49.528" Z="1.9155185757942246"/>
+		<AntennaNode ID="58" X="3.313925417350714" Y="51.052" Z="1.9155185757942246"/>
+		<AntennaNode ID="59" X="-3.3040421984468034" Y="49.425129999999996" Z="1.9097768962405242"/>
+		<AntennaNode ID="60" X="-3.3040421984468034" Y="51.15487" Z="1.9097768962405242"/>
+		<AntennaNode ID="61" X="0.0" Y="49.425129999999996" Z="-3.8193699999999997"/>
+		<AntennaNode ID="62" X="0.0" Y="51.15487" Z="-3.8193699999999997"/>
+		<AntennaNode ID="63" X="3.3040421984468034" Y="49.425129999999996" Z="1.9097768962405242"/>
+		<AntennaNode ID="64" X="3.3040421984468034" Y="51.15487" Z="1.9097768962405242"/>
+		<AntennaNode ID="65" X="-3.6867301293094994" Y="46.63929" Z="2.130767027503614"/>
+		<AntennaNode ID="66" X="-3.6867301293094994" Y="47.84071" Z="2.130767027503614"/>
+		<AntennaNode ID="67" X="0.0" Y="46.63929" Z="-4.26004"/>
+		<AntennaNode ID="68" X="0.0" Y="47.84071" Z="-4.26004"/>
+		<AntennaNode ID="69" X="3.6867301293094994" Y="46.63929" Z="2.130767027503614"/>
+		<AntennaNode ID="70" X="3.6867301293094994" Y="47.84071" Z="2.130767027503614"/>
+		<AntennaNode ID="71" X="-3.4550235527844824" Y="46.32052" Z="1.9961565401890802"/>
+		<AntennaNode ID="72" X="-3.4550235527844824" Y="48.15948" Z="1.9961565401890802"/>
+		<AntennaNode ID="73" X="0.0" Y="46.62024" Z="-3.9996899999999997"/>
+		<AntennaNode ID="74" X="0.0" Y="47.85976" Z="-3.9996899999999997"/>
+		<AntennaNode ID="75" X="3.4550235527844824" Y="46.32052" Z="1.9961565401890802"/>
+		<AntennaNode ID="76" X="3.4550235527844824" Y="48.15948" Z="1.9961565401890802"/>
+		<AntennaNode ID="77" X="-3.4671030425559284" Y="46.037310000000005" Z="2.003174148532492"/>
+		<AntennaNode ID="78" X="-3.4671030425559284" Y="48.44269" Z="2.003174148532492"/>
+		<AntennaNode ID="79" X="0.0" Y="46.037310000000005" Z="-4.00604"/>
+		<AntennaNode ID="80" X="0.0" Y="48.44269" Z="-4.00604"/>
+		<AntennaNode ID="81" X="3.4671030425559284" Y="46.037310000000005" Z="2.003174148532492"/>
+		<AntennaNode ID="82" X="3.4671030425559284" Y="48.44269" Z="2.003174148532492"/>
+		<AntennaNode ID="83" X="-3.4835750740624465" Y="46.93012" Z="2.012743614455326"/>
+		<AntennaNode ID="84" X="-3.4835750740624465" Y="47.54988" Z="2.012743614455326"/>
+		<AntennaNode ID="85" X="0.0" Y="46.93012" Z="-4.02509"/>
+		<AntennaNode ID="86" X="0.0" Y="47.54988" Z="-4.02509"/>
+		<AntennaNode ID="87" X="3.4835750740624465" Y="46.93012" Z="2.012743614455326"/>
+		<AntennaNode ID="88" X="3.4835750740624465" Y="47.54988" Z="2.012743614455326"/>
+		<AntennaNode ID="89" X="-3.5225588819612055" Y="46.914118" Z="2.0353913504727004"/>
+		<AntennaNode ID="90" X="-3.5225588819612055" Y="47.565882" Z="2.0353913504727004"/>
+		<AntennaNode ID="91" X="-3.480280667761143" Y="47.095220000000005" Z="2.0108297212707593"/>
+		<AntennaNode ID="92" X="-3.480280667761143" Y="47.38478" Z="2.0108297212707593"/>
+		<AntennaNode ID="93" X="0.0" Y="47.095220000000005" Z="-4.02128"/>
+		<AntennaNode ID="94" X="0.0" Y="47.38478" Z="-4.02128"/>
+		<AntennaNode ID="95" X="3.480280667761143" Y="47.095220000000005" Z="2.0108297212707593"/>
+		<AntennaNode ID="96" X="3.480280667761143" Y="47.38478" Z="2.0108297212707593"/>
+		<AntennaNode ID="97" X="-3.6046735168392336" Y="42.92734" Z="2.079953627615031"/>
+		<AntennaNode ID="98" X="-3.6046735168392336" Y="44.85266" Z="2.079953627615031"/>
+		<AntennaNode ID="99" X="0.0" Y="42.92734" Z="-4.160005"/>
+		<AntennaNode ID="100" X="0.0" Y="44.85266" Z="-4.160005"/>
+		<AntennaNode ID="101" X="3.6046735168392336" Y="42.92734" Z="2.079953627615031"/>
+		<AntennaNode ID="102" X="3.6046735168392336" Y="44.85266" Z="2.079953627615031"/>
+		<AntennaNode ID="103" X="-3.6360447939794933" Y="43.64997" Z="2.0980069097429164"/>
+		<AntennaNode ID="104" X="-3.6360447939794933" Y="44.13003" Z="2.0980069097429164"/>
+		<AntennaNode ID="105" X="0.0" Y="43.64997" Z="-4.1962"/>
+		<AntennaNode ID="106" X="0.0" Y="44.13003" Z="-4.1962"/>
+		<AntennaNode ID="107" X="3.6360447939794933" Y="43.64997" Z="2.0980069097429164"/>
+		<AntennaNode ID="108" X="3.6360447939794933" Y="44.13003" Z="2.0980069097429164"/>
+		<AntennaNode ID="109" X="-3.6341735248167413" Y="43.631174" Z="2.0969300473002006"/>
+		<AntennaNode ID="110" X="-3.6341735248167413" Y="44.148826" Z="2.0969300473002006"/>
+		<AntennaNode ID="111" X="0.0" Y="43.60933" Z="-4.18604"/>
+		<AntennaNode ID="112" X="0.0" Y="44.17067" Z="-4.18604"/>
+		<AntennaNode ID="113" X="3.6272388214488944" Y="43.60933" Z="2.092939321777194"/>
+		<AntennaNode ID="114" X="3.6272388214488944" Y="44.17067" Z="2.092939321777194"/>
+		<AntennaNode ID="115" X="-3.44" Y="40.57965" Z="2.1424"/>
+		<AntennaNode ID="116" X="-3.44" Y="41.100350000000006" Z="2.1424"/>
+		<AntennaNode ID="117" X="0.0" Y="40.690775" Z="-4.01318"/>
+		<AntennaNode ID="118" X="0.0" Y="40.989225000000005" Z="-4.01318"/>
+		<AntennaNode ID="119" X="-3.44" Y="40.68506" Z="2.04207"/>
+		<AntennaNode ID="120" X="-3.44" Y="40.99494000000001" Z="2.04207"/>
+		<AntennaNode ID="121" X="-3.44" Y="40.776500000000006" Z="2.00905"/>
+		<AntennaNode ID="122" X="-3.44" Y="40.9035" Z="2.00905"/>
+		<AntennaNode ID="123" X="0.0" Y="49.96361" Z="-3.9311299999999996"/>
+		<AntennaNode ID="124" X="0.0" Y="50.616389999999996" Z="-3.9311299999999996"/>
+		<AntennaNode ID="125" X="-3.44" Y="40.332" Z="2.17923"/>
+		<AntennaNode ID="126" X="-3.44" Y="41.348000000000006" Z="2.17923"/>
+		<AntennaNode ID="127" X="-3.23" Y="29.2608" Z="1.86"/>
+		<AntennaNode ID="128" X="-3.23" Y="31.6992" Z="1.86"/>
+		<AntennaNode ID="129" X="0.0" Y="8.5304" Z="-4.85"/>
+		<AntennaNode ID="130" X="0.0" Y="9.749600000000001" Z="-4.85"/>
+		<AntennaNode ID="131" X="0.0" Y="6.6484499999999995" Z="-4.93"/>
+		<AntennaNode ID="132" X="0.0" Y="8.59155" Z="-4.93"/>
+	</AntennaNodes>
+	<Antennas>
+	<Antenna ID="1">
+			<AntennaMember ID="1" RefID="1" StartNodeID="1" EndNodeID="2" SectionID="3" AntennaPropertyID="1" Label="Antenna" MountID="1" SourceAppElementId="Antenna_1_PANEL"/>
+		</Antenna>
+		<Antenna ID="2">
+			<AntennaMember ID="2" RefID="2" StartNodeID="3" EndNodeID="4" SectionID="3" AntennaPropertyID="2" Label="Antenna" MountID="1" SourceAppElementId="Antenna_2_PANEL"/>
+		</Antenna>
+		<Antenna ID="3">
+			<AntennaMember ID="3" RefID="3" StartNodeID="5" EndNodeID="6" SectionID="3" AntennaPropertyID="3" Label="Antenna" MountID="2" SourceAppElementId="Antenna_3_PANEL"/>
+		</Antenna>
+		<Antenna ID="4">
+			<AntennaMember ID="4" RefID="4" StartNodeID="7" EndNodeID="8" SectionID="3" AntennaPropertyID="4" Label="Antenna" MountID="1" SourceAppElementId="Antenna_4_TME"/>
+		</Antenna>
+		<Antenna ID="5">
+			<AntennaMember ID="5" RefID="5" StartNodeID="9" EndNodeID="10" SectionID="3" AntennaPropertyID="5" Label="Antenna" MountID="1" SourceAppElementId="Antenna_5_TME"/>
+		</Antenna>
+		<Antenna ID="6">
+			<AntennaMember ID="6" RefID="6" StartNodeID="11" EndNodeID="12" SectionID="3" AntennaPropertyID="6" Label="Antenna" MountID="2" SourceAppElementId="Antenna_6_TME"/>
+		</Antenna>
+		<Antenna ID="7">
+			<AntennaMember ID="7" RefID="7" StartNodeID="13" EndNodeID="14" SectionID="3" AntennaPropertyID="7" Label="Antenna" MountID="1" SourceAppElementId="Antenna_7_PANEL"/>
+		</Antenna>
+		<Antenna ID="8">
+			<AntennaMember ID="8" RefID="8" StartNodeID="15" EndNodeID="16" SectionID="3" AntennaPropertyID="8" Label="Antenna" MountID="2" SourceAppElementId="Antenna_8_PANEL"/>
+		</Antenna>
+		<Antenna ID="9">
+			<AntennaMember ID="9" RefID="9" StartNodeID="17" EndNodeID="18" SectionID="3" AntennaPropertyID="9" Label="Antenna" MountID="2" SourceAppElementId="Antenna_9_PANEL"/>
+		</Antenna>
+		<Antenna ID="10">
+			<AntennaMember ID="10" RefID="10" StartNodeID="19" EndNodeID="20" SectionID="3" AntennaPropertyID="10" Label="Antenna" MountID="1" SourceAppElementId="Antenna_10_TME"/>
+		</Antenna>
+		<Antenna ID="11">
+			<AntennaMember ID="11" RefID="11" StartNodeID="21" EndNodeID="22" SectionID="3" AntennaPropertyID="11" Label="Antenna" MountID="2" SourceAppElementId="Antenna_11_TME"/>
+		</Antenna>
+		<Antenna ID="12">
+			<AntennaMember ID="12" RefID="12" StartNodeID="23" EndNodeID="24" SectionID="3" AntennaPropertyID="12" Label="Antenna" MountID="2" SourceAppElementId="Antenna_12_TME"/>
+		</Antenna>
+	</Antennas>
+</Staad>

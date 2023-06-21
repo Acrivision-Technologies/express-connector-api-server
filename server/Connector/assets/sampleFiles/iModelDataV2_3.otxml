@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Staad>
+  <Sections>
+    <Section ID="1" Name="HollowCircleProfile" Radius="1.27083333333333" WallThickness="0.0260416666666667" />
+    <Section ID="2" Name="HollowCircleProfile" Radius="1.91854166666667" WallThickness="0.0364583333333333" />
+  </Sections>
+  <Nodes>
+    <Node ID="1" X="0" Y="30.1752" Z="0" />
+    <Node ID="2" X="0" Y="14.9352" Z="0" />
+    <Node ID="3" X="0" Y="16.2306" Z="0" />
+    <Node ID="4" X="0" Y="0" Z="0" />
+  </Nodes>
+  <PoleProperties>
+    <PoleProperty PoleID="1" Label="Pole 1" SectionLength="50" TopElevation="99" BottomElevation="49" TopFlatDiameter="1.16666666666667" BottomFlatDiameter="2.54166666666667" TopTipDiameter="1.181975" BottomTipDiameter="2.57818333333333" Thickness="0.0260416666666667" PolesectionType="Tapered" TopFlatWidth="0.162491666666667" BottomFlatWidth="0.408683333333333" ComponentName="Pole" />
+    <PoleProperty PoleID="2" Label="Pole 2" SectionLength="53.25" TopElevation="53.25" BottomElevation="0" TopFlatDiameter="2.38688802083333" BottomFlatDiameter="3.83708333333333" TopTipDiameter="2.41994166666667" BottomTipDiameter="3.89250833333333" Thickness="0.0364583333333333" PolesectionType="Tapered" TopFlatWidth="0.362416666666667" BottomFlatWidth="0.622066666666667" ComponentName="Pole" />
+  </PoleProperties>
+  <Pole ID="1">
+    <PhysicalMember PolePropertyID="1" ID="1" StartNodeID="1" EndNodeID="2" SectionID="1" BetaAngle="-90" Label="Leg_C" HashId="1_-90_Leg_C" />
+  </Pole>
+  <Pole ID="2">
+    <PhysicalMember PolePropertyID="2" ID="2" StartNodeID="3" EndNodeID="4" SectionID="2" BetaAngle="-90" Label="Leg_C" HashId="2_-90_Leg_C" />
+  </Pole>
+  <AppurtenancesSections>
+    <AppurtenancesSection ID="1" Name="CircleProfile" Radius="1.1875" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0301625" Y="0" Z="0" HashId="1_0.0301625_0_0" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0299972666690455" Y="0" Z="0.0031528397733106" HashId="1_0.0299972666690455_0_0.0031528397733106" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0295033770071334" Y="0" Z="0.00627113637429067" HashId="1_0.0295033770071334_0_0.00627113637429067" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0286862421727526" Y="0" Z="0.00932072509283435" HashId="1_0.0286862421727526_0_0.00932072509283435" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0275548148661449" Y="0" Z="0.0122681939967738" HashId="1_0.0275548148661449_0_0.0122681939967738" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0261214912416481" Y="0" Z="0.01508125" HashId="1_0.0261214912416481_0_0.01508125" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0244019750928344" Y="0" Z="0.0177290726722717" HashId="1_0.0244019750928344_0_0.0177290726722717" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0224151057984619" Y="0" Z="0.0201826519142991" HashId="1_0.0224151057984619_0_0.0201826519142991" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0201826519142991" Y="0" Z="0.0224151057984619" HashId="1_0.0201826519142991_0_0.0224151057984619" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0177290726722717" Y="0" Z="0.0244019750928344" HashId="1_0.0177290726722717_0_0.0244019750928344" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.01508125" Y="0" Z="0.0261214912416481" HashId="1_0.01508125_0_0.0261214912416481" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0122681939967738" Y="0" Z="0.0275548148661449" HashId="1_0.0122681939967738_0_0.0275548148661449" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.00932072509283435" Y="0" Z="0.0286862421727526" HashId="1_0.00932072509283435_0_0.0286862421727526" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.00627113637429067" Y="0" Z="0.0295033770071334" HashId="1_0.00627113637429067_0_0.0295033770071334" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0031528397733106" Y="0" Z="0.0299972666690455" HashId="1_0.0031528397733106_0_0.0299972666690455" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="1.84685945735837E-18" Y="0" Z="0.0301625" HashId="1_1.84685945735837E-18_0_0.0301625" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00315283977331059" Y="0" Z="0.0299972666690455" HashId="1_-0.00315283977331059_0_0.0299972666690455" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00627113637429066" Y="0" Z="0.0295033770071334" HashId="1_-0.00627113637429066_0_0.0295033770071334" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00932072509283435" Y="0" Z="0.0286862421727526" HashId="1_-0.00932072509283435_0_0.0286862421727526" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0122681939967738" Y="0" Z="0.027554814866145" HashId="1_-0.0122681939967738_0_0.027554814866145" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.01508125" Y="0" Z="0.0261214912416481" HashId="1_-0.01508125_0_0.0261214912416481" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0177290726722717" Y="0" Z="0.0244019750928344" HashId="1_-0.0177290726722717_0_0.0244019750928344" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0201826519142991" Y="0" Z="0.0224151057984619" HashId="1_-0.0201826519142991_0_0.0224151057984619" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0224151057984619" Y="0" Z="0.0201826519142991" HashId="1_-0.0224151057984619_0_0.0201826519142991" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0244019750928343" Y="0" Z="0.0177290726722717" HashId="1_-0.0244019750928343_0_0.0177290726722717" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0261214912416481" Y="0" Z="0.01508125" HashId="1_-0.0261214912416481_0_0.01508125" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0275548148661449" Y="0" Z="0.0122681939967738" HashId="1_-0.0275548148661449_0_0.0122681939967738" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0286862421727526" Y="0" Z="0.00932072509283435" HashId="1_-0.0286862421727526_0_0.00932072509283435" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0295033770071334" Y="0" Z="0.00627113637429067" HashId="1_-0.0295033770071334_0_0.00627113637429067" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0299972666690455" Y="0" Z="0.00315283977331061" HashId="1_-0.0299972666690455_0_0.00315283977331061" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0301625" Y="0" Z="3.69371891471675E-18" HashId="1_-0.0301625_0_3.69371891471675E-18" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0299972666690455" Y="0" Z="-0.00315283977331059" HashId="1_-0.0299972666690455_0_-0.00315283977331059" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0295033770071334" Y="0" Z="-0.00627113637429066" HashId="1_-0.0295033770071334_0_-0.00627113637429066" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0286862421727526" Y="0" Z="-0.00932072509283436" HashId="1_-0.0286862421727526_0_-0.00932072509283436" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.027554814866145" Y="0" Z="-0.0122681939967738" HashId="1_-0.027554814866145_0_-0.0122681939967738" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0261214912416481" Y="0" Z="-0.01508125" HashId="1_-0.0261214912416481_0_-0.01508125" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0244019750928344" Y="0" Z="-0.0177290726722717" HashId="1_-0.0244019750928344_0_-0.0177290726722717" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0224151057984619" Y="0" Z="-0.0201826519142991" HashId="1_-0.0224151057984619_0_-0.0201826519142991" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0201826519142991" Y="0" Z="-0.0224151057984619" HashId="1_-0.0201826519142991_0_-0.0224151057984619" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0177290726722717" Y="0" Z="-0.0244019750928343" HashId="1_-0.0177290726722717_0_-0.0244019750928343" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.01508125" Y="0" Z="-0.0261214912416481" HashId="1_-0.01508125_0_-0.0261214912416481" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.0122681939967738" Y="0" Z="-0.027554814866145" HashId="1_-0.0122681939967738_0_-0.027554814866145" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00932072509283435" Y="0" Z="-0.0286862421727526" HashId="1_-0.00932072509283435_0_-0.0286862421727526" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00627113637429068" Y="0" Z="-0.0295033770071334" HashId="1_-0.00627113637429068_0_-0.0295033770071334" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00315283977331059" Y="0" Z="-0.0299972666690455" HashId="1_-0.00315283977331059_0_-0.0299972666690455" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="-5.54057837207512E-18" Y="0" Z="-0.0301625" HashId="1_-5.54057837207512E-18_0_-0.0301625" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.00315283977331058" Y="0" Z="-0.0299972666690455" HashId="1_0.00315283977331058_0_-0.0299972666690455" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.00627113637429064" Y="0" Z="-0.0295033770071334" HashId="1_0.00627113637429064_0_-0.0295033770071334" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.00932072509283434" Y="0" Z="-0.0286862421727526" HashId="1_0.00932072509283434_0_-0.0286862421727526" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0122681939967738" Y="0" Z="-0.0275548148661449" HashId="1_0.0122681939967738_0_-0.0275548148661449" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.01508125" Y="0" Z="-0.0261214912416481" HashId="1_0.01508125_0_-0.0261214912416481" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0177290726722717" Y="0" Z="-0.0244019750928344" HashId="1_0.0177290726722717_0_-0.0244019750928344" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.020182651914299" Y="0" Z="-0.0224151057984619" HashId="1_0.020182651914299_0_-0.0224151057984619" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0224151057984619" Y="0" Z="-0.0201826519142991" HashId="1_0.0224151057984619_0_-0.0201826519142991" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0244019750928343" Y="0" Z="-0.0177290726722717" HashId="1_0.0244019750928343_0_-0.0177290726722717" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0261214912416481" Y="0" Z="-0.01508125" HashId="1_0.0261214912416481_0_-0.01508125" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.027554814866145" Y="0" Z="-0.0122681939967738" HashId="1_0.027554814866145_0_-0.0122681939967738" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0286862421727526" Y="0" Z="-0.00932072509283436" HashId="1_0.0286862421727526_0_-0.00932072509283436" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0295033770071334" Y="0" Z="-0.00627113637429068" HashId="1_0.0295033770071334_0_-0.00627113637429068" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0299972666690455" Y="0" Z="-0.0031528397733106" HashId="1_0.0299972666690455_0_-0.0031528397733106" />
+    <AppurtenancePolyLine PolygonID="1" RefID="1" X="0.0301625" Y="0" Z="-7.38743782943349E-18" HashId="1_0.0301625_0_-7.38743782943349E-18" />
+    <AppurtenancesSection ID="2" Name="CircleProfile" Radius="2" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0508" Y="0" Z="0" HashId="1_0.0508_0_0" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0505217122847083" Y="0" Z="0.0053100459339968" HashId="1_0.0505217122847083_0_0.0053100459339968" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0496898981172773" Y="0" Z="0.0105619138935422" HashId="1_0.0496898981172773_0_0.0105619138935422" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0483136710277938" Y="0" Z="0.0156980633142473" HashId="1_0.0483136710277938_0_0.0156980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0464081092482441" Y="0" Z="0.0206622214682506" HashId="1_0.0464081092482441_0_0.0206622214682506" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0439940905122495" Y="0" Z="0.0254" HashId="1_0.0439940905122495_0_0.0254" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0410980633142473" Y="0" Z="0.0298594908164576" HashId="1_0.0410980633142473_0_0.0298594908164576" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0377517571342516" Y="0" Z="0.03399183480303" HashId="1_0.0377517571342516_0_0.03399183480303" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.03399183480303" Y="0" Z="0.0377517571342516" HashId="1_0.03399183480303_0_0.0377517571342516" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0298594908164576" Y="0" Z="0.0410980633142473" HashId="1_0.0298594908164576_0_0.0410980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0254" Y="0" Z="0.0439940905122495" HashId="1_0.0254_0_0.0439940905122495" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0206622214682506" Y="0" Z="0.0464081092482441" HashId="1_0.0206622214682506_0_0.0464081092482441" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0156980633142473" Y="0" Z="0.0483136710277938" HashId="1_0.0156980633142473_0_0.0483136710277938" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0105619138935422" Y="0" Z="0.0496898981172773" HashId="1_0.0105619138935422_0_0.0496898981172773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0053100459339968" Y="0" Z="0.0505217122847083" HashId="1_0.0053100459339968_0_0.0505217122847083" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="3.11050013870884E-18" Y="0" Z="0.0508" HashId="1_3.11050013870884E-18_0_0.0508" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00531004593399679" Y="0" Z="0.0505217122847083" HashId="1_-0.00531004593399679_0_0.0505217122847083" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0105619138935422" Y="0" Z="0.0496898981172773" HashId="1_-0.0105619138935422_0_0.0496898981172773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0156980633142473" Y="0" Z="0.0483136710277938" HashId="1_-0.0156980633142473_0_0.0483136710277938" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0206622214682506" Y="0" Z="0.0464081092482441" HashId="1_-0.0206622214682506_0_0.0464081092482441" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0254" Y="0" Z="0.0439940905122495" HashId="1_-0.0254_0_0.0439940905122495" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0298594908164576" Y="0" Z="0.0410980633142473" HashId="1_-0.0298594908164576_0_0.0410980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.03399183480303" Y="0" Z="0.0377517571342516" HashId="1_-0.03399183480303_0_0.0377517571342516" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0377517571342516" Y="0" Z="0.03399183480303" HashId="1_-0.0377517571342516_0_0.03399183480303" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0410980633142473" Y="0" Z="0.0298594908164576" HashId="1_-0.0410980633142473_0_0.0298594908164576" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0439940905122495" Y="0" Z="0.0254" HashId="1_-0.0439940905122495_0_0.0254" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0464081092482441" Y="0" Z="0.0206622214682507" HashId="1_-0.0464081092482441_0_0.0206622214682507" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0483136710277938" Y="0" Z="0.0156980633142473" HashId="1_-0.0483136710277938_0_0.0156980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0496898981172773" Y="0" Z="0.0105619138935422" HashId="1_-0.0496898981172773_0_0.0105619138935422" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0505217122847083" Y="0" Z="0.00531004593399681" HashId="1_-0.0505217122847083_0_0.00531004593399681" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0508" Y="0" Z="6.22100027741768E-18" HashId="1_-0.0508_0_6.22100027741768E-18" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0505217122847083" Y="0" Z="-0.00531004593399678" HashId="1_-0.0505217122847083_0_-0.00531004593399678" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0496898981172773" Y="0" Z="-0.0105619138935422" HashId="1_-0.0496898981172773_0_-0.0105619138935422" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0483136710277938" Y="0" Z="-0.0156980633142473" HashId="1_-0.0483136710277938_0_-0.0156980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0464081092482441" Y="0" Z="-0.0206622214682506" HashId="1_-0.0464081092482441_0_-0.0206622214682506" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0439940905122495" Y="0" Z="-0.0254" HashId="1_-0.0439940905122495_0_-0.0254" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0410980633142473" Y="0" Z="-0.0298594908164576" HashId="1_-0.0410980633142473_0_-0.0298594908164576" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0377517571342516" Y="0" Z="-0.03399183480303" HashId="1_-0.0377517571342516_0_-0.03399183480303" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.03399183480303" Y="0" Z="-0.0377517571342516" HashId="1_-0.03399183480303_0_-0.0377517571342516" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0298594908164576" Y="0" Z="-0.0410980633142473" HashId="1_-0.0298594908164576_0_-0.0410980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0254" Y="0" Z="-0.0439940905122495" HashId="1_-0.0254_0_-0.0439940905122495" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0206622214682506" Y="0" Z="-0.0464081092482441" HashId="1_-0.0206622214682506_0_-0.0464081092482441" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0156980633142473" Y="0" Z="-0.0483136710277938" HashId="1_-0.0156980633142473_0_-0.0483136710277938" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0105619138935422" Y="0" Z="-0.0496898981172773" HashId="1_-0.0105619138935422_0_-0.0496898981172773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00531004593399679" Y="0" Z="-0.0505217122847083" HashId="1_-0.00531004593399679_0_-0.0505217122847083" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="-9.33150041612651E-18" Y="0" Z="-0.0508" HashId="1_-9.33150041612651E-18_0_-0.0508" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.00531004593399677" Y="0" Z="-0.0505217122847083" HashId="1_0.00531004593399677_0_-0.0505217122847083" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0105619138935421" Y="0" Z="-0.0496898981172773" HashId="1_0.0105619138935421_0_-0.0496898981172773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0156980633142473" Y="0" Z="-0.0483136710277938" HashId="1_0.0156980633142473_0_-0.0483136710277938" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0206622214682507" Y="0" Z="-0.0464081092482441" HashId="1_0.0206622214682507_0_-0.0464081092482441" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0254" Y="0" Z="-0.0439940905122495" HashId="1_0.0254_0_-0.0439940905122495" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0298594908164576" Y="0" Z="-0.0410980633142473" HashId="1_0.0298594908164576_0_-0.0410980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.03399183480303" Y="0" Z="-0.0377517571342516" HashId="1_0.03399183480303_0_-0.0377517571342516" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0377517571342516" Y="0" Z="-0.03399183480303" HashId="1_0.0377517571342516_0_-0.03399183480303" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0410980633142473" Y="0" Z="-0.0298594908164576" HashId="1_0.0410980633142473_0_-0.0298594908164576" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0439940905122495" Y="0" Z="-0.0254" HashId="1_0.0439940905122495_0_-0.0254" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0464081092482441" Y="0" Z="-0.0206622214682506" HashId="1_0.0464081092482441_0_-0.0206622214682506" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0483136710277938" Y="0" Z="-0.0156980633142473" HashId="1_0.0483136710277938_0_-0.0156980633142473" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0496898981172773" Y="0" Z="-0.0105619138935422" HashId="1_0.0496898981172773_0_-0.0105619138935422" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0505217122847083" Y="0" Z="-0.00531004593399679" HashId="1_0.0505217122847083_0_-0.00531004593399679" />
+    <AppurtenancePolyLine PolygonID="1" RefID="2" X="0.0508" Y="0" Z="-1.24420005548354E-17" HashId="1_0.0508_0_-1.24420005548354E-17" />
+    <AppurtenancesSection ID="3" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="3" X="7.32963474386894E-05" Y="0" Z="-0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="3" X="-0.198046703652561" Y="0" Z="0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="3" X="-7.32963474388004E-05" Y="0" Z="0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="3" X="0.198046703652561" Y="0" Z="-0.114426952997773" />
+    <AppurtenancesSection ID="4" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="4" X="7.32963474392445E-05" Y="0" Z="-0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="4" X="-0.198046703652561" Y="0" Z="0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="4" X="-7.32963474390225E-05" Y="0" Z="0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="4" X="0.198046703652561" Y="0" Z="-0.114426952997773" />
+    <AppurtenancesSection ID="5" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="5" X="-0.0890513851135861" Y="0" Z="-0.165798476498886" />
+    <AppurtenancePolyLine PolygonID="1" RefID="5" X="-0.188111385113586" Y="0" Z="0.00577847649888685" />
+    <AppurtenancePolyLine PolygonID="1" RefID="5" X="0.0890513851135859" Y="0" Z="0.165798476498886" />
+    <AppurtenancePolyLine PolygonID="1" RefID="5" X="0.188111385113586" Y="0" Z="-0.00577847649888674" />
+    <AppurtenancesSection ID="6" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="6" X="-0.107847385113586" Y="0" Z="-0.133242849519822" />
+    <AppurtenancePolyLine PolygonID="1" RefID="6" X="-0.169315385113586" Y="0" Z="-0.0267771504801779" />
+    <AppurtenancePolyLine PolygonID="1" RefID="6" X="0.107847385113586" Y="0" Z="0.133242849519822" />
+    <AppurtenancePolyLine PolygonID="1" RefID="6" X="0.169315385113586" Y="0" Z="0.0267771504801779" />
+    <AppurtenancesSection ID="7" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="7" X="0.000911818975500911" Y="0" Z="-0.204779316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="7" X="-0.176888181024499" Y="0" Z="0.103179316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="7" X="-0.000911818975500939" Y="0" Z="0.204779316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="7" X="0.176888181024499" Y="0" Z="-0.103179316792873" />
+    <AppurtenancesSection ID="8" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="8" X="0.0556396130783963" Y="0" Z="-0.244452636765256" />
+    <AppurtenancePolyLine PolygonID="1" RefID="8" X="-0.183882386921603" Y="0" Z="0.170411636765256" />
+    <AppurtenancePolyLine PolygonID="1" RefID="8" X="-0.0556396130783962" Y="0" Z="0.244452636765256" />
+    <AppurtenancePolyLine PolygonID="1" RefID="8" X="0.183882386921604" Y="0" Z="-0.170411636765256" />
+    <AppurtenancesSection ID="9" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="9" X="0.198046703652561" Y="0" Z="0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="9" X="-7.32963474385784E-05" Y="0" Z="-0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="9" X="-0.198046703652561" Y="0" Z="-0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="9" X="7.32963474383563E-05" Y="0" Z="0.228726952997773" />
+    <AppurtenancesSection ID="10" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="10" X="0.198046703652561" Y="0" Z="0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="10" X="-7.32963474389114E-05" Y="0" Z="-0.228726952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="10" X="-0.198046703652561" Y="0" Z="-0.114426952997773" />
+    <AppurtenancePolyLine PolygonID="1" RefID="10" X="7.32963474386894E-05" Y="0" Z="0.228726952997773" />
+    <AppurtenancesSection ID="11" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="11" X="0.188111385113586" Y="0" Z="0.00577847649888663" />
+    <AppurtenancePolyLine PolygonID="1" RefID="11" X="0.0890513851135858" Y="0" Z="-0.165798476498887" />
+    <AppurtenancePolyLine PolygonID="1" RefID="11" X="-0.188111385113586" Y="0" Z="-0.00577847649888641" />
+    <AppurtenancePolyLine PolygonID="1" RefID="11" X="-0.0890513851135859" Y="0" Z="0.165798476498886" />
+    <AppurtenancesSection ID="12" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="12" X="0.169315385113586" Y="0" Z="-0.0267771504801781" />
+    <AppurtenancePolyLine PolygonID="1" RefID="12" X="0.107847385113586" Y="0" Z="-0.133242849519822" />
+    <AppurtenancePolyLine PolygonID="1" RefID="12" X="-0.169315385113586" Y="0" Z="0.0267771504801781" />
+    <AppurtenancePolyLine PolygonID="1" RefID="12" X="-0.107847385113586" Y="0" Z="0.133242849519822" />
+    <AppurtenancesSection ID="13" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="13" X="0.176888181024499" Y="0" Z="0.103179316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="13" X="-0.000911818975500855" Y="0" Z="-0.204779316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="13" X="-0.176888181024499" Y="0" Z="-0.103179316792873" />
+    <AppurtenancePolyLine PolygonID="1" RefID="13" X="0.000911818975500633" Y="0" Z="0.204779316792873" />
+    <AppurtenancesSection ID="14" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="14" X="-0.19812" Y="0" Z="0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="14" X="0.19812" Y="0" Z="0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="14" X="0.19812" Y="0" Z="-0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="14" X="-0.19812" Y="0" Z="-0.1143" />
+    <AppurtenancesSection ID="15" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="15" X="-0.19812" Y="0" Z="0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="15" X="0.19812" Y="0" Z="0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="15" X="0.19812" Y="0" Z="-0.1143" />
+    <AppurtenancePolyLine PolygonID="1" RefID="15" X="-0.19812" Y="0" Z="-0.1143" />
+    <AppurtenancesSection ID="16" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="16" X="-0.0990599999999999" Y="0" Z="0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="16" X="0.0990599999999999" Y="0" Z="0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="16" X="0.0990599999999999" Y="0" Z="-0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="16" X="-0.0990599999999999" Y="0" Z="-0.16002" />
+    <AppurtenancesSection ID="17" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="17" X="-0.0614680000000001" Y="0" Z="0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="17" X="0.0614680000000001" Y="0" Z="0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="17" X="0.0614680000000001" Y="0" Z="-0.16002" />
+    <AppurtenancePolyLine PolygonID="1" RefID="17" X="-0.0614680000000001" Y="0" Z="-0.16002" />
+    <AppurtenancesSection ID="18" Name="RegularPolygonProfile" SideCount="4" SideLength="0.001" />
+    <AppurtenancePolyLine PolygonID="1" RefID="18" X="-0.1778" Y="0" Z="0.1016" />
+    <AppurtenancePolyLine PolygonID="1" RefID="18" X="0.1778" Y="0" Z="0.1016" />
+    <AppurtenancePolyLine PolygonID="1" RefID="18" X="0.1778" Y="0" Z="-0.1016" />
+    <AppurtenancePolyLine PolygonID="1" RefID="18" X="-0.1778" Y="0" Z="-0.1016" />
+  </AppurtenancesSections>
+  <MountProperties>
+    <MountProperty ID="1" Label="LP 602-1 - 99 (ft)" Name="LP 602-1" Elevation="99" Manufacturer="MOUNTS" ModelName="LP 602-1" Type="LowProfilePlatform" Location="FaceACentroid" Azimuth="0" Height="4" Width="12" Standoff="0" Weight="1343.3" Classification="Existing" ComponentName="Mount" />
+  </MountProperties>
+  <MountNodes>
+    <MountNode ID="1" X="1.13999830083679E-17" Y="29.5656" Z="-0.186182" />
+    <MountNode ID="2" X="1.2930106265265E-16" Y="29.5656" Z="-2.11171634458797" />
+    <MountNode ID="3" X="0.161238341727394" Y="29.5656" Z="0.0930910000000001" />
+    <MountNode ID="4" X="1.8288" Y="29.5656" Z="1.05585817229399" />
+    <MountNode ID="5" X="-0.161238341727394" Y="29.5656" Z="0.093091" />
+    <MountNode ID="6" X="-1.8288" Y="29.5656" Z="1.05585817229399" />
+    <MountNode ID="7" X="1.2930106265265E-16" Y="30.7848" Z="-2.11171634458797" />
+    <MountNode ID="8" X="1.8288" Y="30.7848" Z="1.05585817229399" />
+    <MountNode ID="9" X="-1.8288" Y="30.7848" Z="1.05585817229399" />
+    <MountNode ID="10" X="-0.451115581753897" Y="31.0896" Z="-1.49228623690423" />
+    <MountNode ID="11" X="-0.451115581753897" Y="29.2608" Z="-1.49228623690423" />
+    <MountNode ID="12" X="-1.5941155817539" Y="31.0896" Z="0.487447836146994" />
+    <MountNode ID="13" X="-1.5941155817539" Y="29.2608" Z="0.487447836146994" />
+    <MountNode ID="14" X="-1.38022954743875" Y="30.1752" Z="0.786911357683742" />
+    <MountNode ID="15" X="-1.22782954743875" Y="30.1752" Z="0.522946814610245" />
+    <MountNode ID="16" X="-0.161029547438752" Y="30.1752" Z="-1.32480498690423" />
+    <MountNode ID="17" X="-0.984515581753898" Y="31.0896" Z="-0.568410336146994" />
+    <MountNode ID="18" X="-0.984515581753898" Y="29.2608" Z="-0.568410336146994" />
+    <MountNode ID="19" X="1.5179155817539" Y="31.0896" Z="0.355465564610246" />
+    <MountNode ID="20" X="1.5179155817539" Y="29.2608" Z="0.355465564610246" />
+    <MountNode ID="21" X="0.374915581753898" Y="31.0896" Z="-1.62426850844098" />
+    <MountNode ID="22" X="0.374915581753898" Y="29.2608" Z="-1.62426850844098" />
+    <MountNode ID="23" X="0.00862954743875256" Y="30.1752" Z="-1.58876952997773" />
+    <MountNode ID="24" X="0.161029547438752" Y="30.1752" Z="-1.32480498690423" />
+    <MountNode ID="25" X="1.22782954743875" Y="30.1752" Z="0.522946814610246" />
+    <MountNode ID="26" X="0.984515581753897" Y="31.0896" Z="-0.568410336146993" />
+    <MountNode ID="27" X="0.984515581753897" Y="29.2608" Z="-0.568410336146993" />
+    <MountNode ID="28" X="-1.0668" Y="31.0896" Z="1.13682067229399" />
+    <MountNode ID="29" X="-1.0668" Y="29.2608" Z="1.13682067229399" />
+    <MountNode ID="30" X="1.2192" Y="31.0896" Z="1.13682067229399" />
+    <MountNode ID="31" X="1.2192" Y="29.2608" Z="1.13682067229399" />
+    <MountNode ID="32" X="1.3716" Y="30.1752" Z="0.801858172293988" />
+    <MountNode ID="33" X="1.0668" Y="30.1752" Z="0.801858172293988" />
+    <MountNode ID="34" X="-1.0668" Y="30.1752" Z="0.801858172293988" />
+    <MountNode ID="35" X="-3.60955709766131E-16" Y="31.0896" Z="1.13682067229399" />
+    <MountNode ID="36" X="-3.60955709766131E-16" Y="29.2608" Z="1.13682067229399" />
+  </MountNodes>
+  <Mounts>
+    <Mount ID="1">
+      <MountMember ID="1" RefID="1" StartNodeID="1" EndNodeID="2" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="3" RefID="1" StartNodeID="3" EndNodeID="4" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="5" RefID="1" StartNodeID="5" EndNodeID="6" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="7" RefID="1" StartNodeID="2" EndNodeID="4" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="9" RefID="1" StartNodeID="4" EndNodeID="6" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="11" RefID="1" StartNodeID="6" EndNodeID="2" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="13" RefID="1" StartNodeID="7" EndNodeID="8" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="15" RefID="1" StartNodeID="8" EndNodeID="9" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="17" RefID="1" StartNodeID="9" EndNodeID="7" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="19" RefID="1" StartNodeID="2" EndNodeID="7" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="21" RefID="1" StartNodeID="4" EndNodeID="8" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="23" RefID="1" StartNodeID="6" EndNodeID="9" SectionID="2" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="25" RefID="1" StartNodeID="10" EndNodeID="11" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="27" RefID="1" StartNodeID="12" EndNodeID="13" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="37" RefID="1" StartNodeID="17" EndNodeID="18" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="39" RefID="1" StartNodeID="19" EndNodeID="20" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="41" RefID="1" StartNodeID="21" EndNodeID="22" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="49" RefID="1" StartNodeID="26" EndNodeID="27" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="51" RefID="1" StartNodeID="28" EndNodeID="29" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="53" RefID="1" StartNodeID="30" EndNodeID="31" SectionID="1" Label="Mount" MountPropertyID="1" />
+      <MountMember ID="61" RefID="1" StartNodeID="35" EndNodeID="36" SectionID="1" Label="Mount" MountPropertyID="1" />
+    </Mount>
+  </Mounts>
+  <AntennaProperties>
+    <AntennaProperty ID="20" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceA" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="21" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceA" Azimuth="0" LateralOffset="-4" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="22" Label="FHFB - 99 (ft)" Name="FHFB" Elevation="99" Manufacturer="NOKIA" ModelName="FHFB" Type="TME" Location="FaceA" Azimuth="0" LateralOffset="-4.5" VerticalOffset="0" HorizontalOffset="-1" Height="34.3" Width="7.8" Depth="12.6" Weight="52.9" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="23" Label="FRIJ - 99 (ft)" Name="FRIJ" Elevation="99" Manufacturer="NOKIA" ModelName="FRIJ" Type="TME" Location="FaceA" Azimuth="0" LateralOffset="-3.5" VerticalOffset="0" HorizontalOffset="-1" Height="23.1" Width="4.84" Depth="12.6" Weight="44.1" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="24" Label="ALHOA - 99 (ft)" Name="ALHOA" Elevation="99" Manufacturer="NOKIA" ModelName="ALHOA" Type="TME" Location="FaceA" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="-1" Height="24" Width="14" Depth="8" Weight="85" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="25" Label="RNSDC-7771-PF-48 - 99 (ft)" Name="RNSDC-7771-PF-48" Elevation="99" Manufacturer="RAYCAP" ModelName="RNSDC-7771-PF-48" Type="TME" Location="FaceA" Azimuth="0" LateralOffset="3.5" VerticalOffset="2" HorizontalOffset="-1" Height="20.38" Width="18.86" Depth="5.83" Weight="19" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="27" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceB" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="28" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceB" Azimuth="0" LateralOffset="-4" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="29" Label="FHFB - 99 (ft)" Name="FHFB" Elevation="99" Manufacturer="NOKIA" ModelName="FHFB" Type="TME" Location="FaceB" Azimuth="0" LateralOffset="-4.5" VerticalOffset="0" HorizontalOffset="-1" Height="34.3" Width="7.8" Depth="12.6" Weight="52.9" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="30" Label="FRIJ - 99 (ft)" Name="FRIJ" Elevation="99" Manufacturer="NOKIA" ModelName="FRIJ" Type="TME" Location="FaceB" Azimuth="0" LateralOffset="-3.5" VerticalOffset="0" HorizontalOffset="-1" Height="23.1" Width="4.84" Depth="12.6" Weight="44.1" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="31" Label="ALHOA - 99 (ft)" Name="ALHOA" Elevation="99" Manufacturer="NOKIA" ModelName="ALHOA" Type="TME" Location="FaceB" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="-1" Height="24" Width="14" Depth="8" Weight="85" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="33" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceC" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="34" Label="FHH-65C-R3 - 99 (ft)" Name="FHH-65C-R3" Elevation="99" Manufacturer="COMMSCOPE" ModelName="FHH-65C-R3" Type="PANEL" Location="FaceC" Azimuth="0" LateralOffset="-4" VerticalOffset="0" HorizontalOffset="0" Height="96" Width="15.6" Depth="9" Weight="69.4" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="35" Label="FHFB - 99 (ft)" Name="FHFB" Elevation="99" Manufacturer="NOKIA" ModelName="FHFB" Type="TME" Location="FaceC" Azimuth="0" LateralOffset="-4.5" VerticalOffset="0" HorizontalOffset="-1" Height="34.3" Width="7.8" Depth="12.6" Weight="52.9" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="36" Label="FRIJ - 99 (ft)" Name="FRIJ" Elevation="99" Manufacturer="NOKIA" ModelName="FRIJ" Type="TME" Location="FaceC" Azimuth="0" LateralOffset="-3.5" VerticalOffset="0" HorizontalOffset="-1" Height="23.1" Width="4.84" Depth="12.6" Weight="44.1" Classification="Existing" ComponentName="Antenna" />
+    <AntennaProperty ID="37" Label="ALHOA - 99 (ft)" Name="ALHOA" Elevation="99" Manufacturer="NOKIA" ModelName="ALHOA" Type="TME" Location="FaceC" Azimuth="0" LateralOffset="3.5" VerticalOffset="0" HorizontalOffset="-1" Height="24" Width="14" Depth="8" Weight="85" Classification="Existing" ComponentName="Antenna" />
+  </AntennaProperties>
+  <AntennaNodes>
+    <AntennaNode ID="1" X="-0.576223776648107" Y="28.956" Z="-1.56451748690423" />
+    <AntennaNode ID="2" X="-0.576223776648107" Y="31.3944" Z="-1.56451748690423" />
+    <AntennaNode ID="3" X="-1.71922377664811" Y="28.956" Z="0.415216586146994" />
+    <AntennaNode ID="4" X="-1.71922377664811" Y="31.3944" Z="0.415216586146994" />
+    <AntennaNode ID="5" X="-1.51881093255234" Y="29.73959" Z="0.706901357683742" />
+    <AntennaNode ID="6" X="-1.51881093255234" Y="30.61081" Z="0.706901357683742" />
+    <AntennaNode ID="7" X="-1.36641093255234" Y="29.88183" Z="0.442936814610246" />
+    <AntennaNode ID="8" X="-1.36641093255234" Y="30.46857" Z="0.442936814610246" />
+    <AntennaNode ID="9" X="-0.249017728463251" Y="29.8704" Z="-1.37560498690423" />
+    <AntennaNode ID="10" X="-0.249017728463251" Y="30.48" Z="-1.37560498690423" />
+    <AntennaNode ID="11" X="-0.225150934360356" Y="30.525974" Z="-1.36182548690423" />
+    <AntennaNode ID="12" X="-0.225150934360356" Y="31.043626" Z="-1.36182548690423" />
+    <AntennaNode ID="13" X="1.64302377664811" Y="28.956" Z="0.283234314610246" />
+    <AntennaNode ID="14" X="1.64302377664811" Y="31.3944" Z="0.283234314610246" />
+    <AntennaNode ID="15" X="0.500023776648107" Y="28.956" Z="-1.69649975844098" />
+    <AntennaNode ID="16" X="0.500023776648107" Y="31.3944" Z="-1.69649975844098" />
+    <AntennaNode ID="17" X="0.147210932552338" Y="29.73959" Z="-1.66877952997773" />
+    <AntennaNode ID="18" X="0.147210932552338" Y="30.61081" Z="-1.66877952997773" />
+    <AntennaNode ID="19" X="0.299610932552338" Y="29.88183" Z="-1.40481498690423" />
+    <AntennaNode ID="20" X="0.299610932552338" Y="30.46857" Z="-1.40481498690423" />
+    <AntennaNode ID="21" X="1.31581772846325" Y="29.8704" Z="0.472146814610246" />
+    <AntennaNode ID="22" X="1.31581772846325" Y="30.48" Z="0.472146814610246" />
+    <AntennaNode ID="23" X="-1.0668" Y="28.956" Z="1.28128317229399" />
+    <AntennaNode ID="24" X="-1.0668" Y="31.3944" Z="1.28128317229399" />
+    <AntennaNode ID="25" X="1.2192" Y="28.956" Z="1.28128317229399" />
+    <AntennaNode ID="26" X="1.2192" Y="31.3944" Z="1.28128317229399" />
+    <AntennaNode ID="27" X="1.3716" Y="29.73959" Z="0.961878172293988" />
+    <AntennaNode ID="28" X="1.3716" Y="30.61081" Z="0.961878172293988" />
+    <AntennaNode ID="29" X="1.0668" Y="29.88183" Z="0.961878172293988" />
+    <AntennaNode ID="30" X="1.0668" Y="30.46857" Z="0.961878172293988" />
+    <AntennaNode ID="31" X="-1.0668" Y="29.8704" Z="0.903458172293988" />
+    <AntennaNode ID="32" X="-1.0668" Y="30.48" Z="0.903458172293988" />
+  </AntennaNodes>
+  <Antennas>
+    <Antenna ID="1">
+      <AntennaMember ID="3" RefID="1" StartNodeID="1" EndNodeID="2" SectionID="3" AntennaPropertyID="20" Label="Antenna" HashId="3_0_30.1752_0_0_14.9352_0_Antenna" />
+    </Antenna>
+    <Antenna ID="2">
+      <AntennaMember ID="4" RefID="2" StartNodeID="3" EndNodeID="4" SectionID="4" AntennaPropertyID="21" Label="Antenna" HashId="4_0_16.2306_0_0_0_0_Antenna" />
+    </Antenna>
+    <Antenna ID="3">
+      <AntennaMember ID="5" RefID="3" StartNodeID="5" EndNodeID="6" SectionID="5" AntennaPropertyID="22" Label="Antenna" HashId="5_Antenna" />
+    </Antenna>
+    <Antenna ID="4">
+      <AntennaMember ID="6" RefID="4" StartNodeID="7" EndNodeID="8" SectionID="6" AntennaPropertyID="23" Label="Antenna" HashId="6_Antenna" />
+    </Antenna>
+    <Antenna ID="5">
+      <AntennaMember ID="7" RefID="5" StartNodeID="9" EndNodeID="10" SectionID="7" AntennaPropertyID="24" Label="Antenna" HashId="7_Antenna" />
+    </Antenna>
+    <Antenna ID="6">
+      <AntennaMember ID="8" RefID="6" StartNodeID="11" EndNodeID="12" SectionID="8" AntennaPropertyID="25" Label="Antenna" HashId="8_Antenna" />
+    </Antenna>
+    <Antenna ID="7">
+      <AntennaMember ID="9" RefID="7" StartNodeID="13" EndNodeID="14" SectionID="9" AntennaPropertyID="27" Label="Antenna" HashId="9_Antenna" />
+    </Antenna>
+    <Antenna ID="8">
+      <AntennaMember ID="10" RefID="8" StartNodeID="15" EndNodeID="16" SectionID="10" AntennaPropertyID="28" Label="Antenna" HashId="10_Antenna" />
+    </Antenna>
+    <Antenna ID="9">
+      <AntennaMember ID="11" RefID="9" StartNodeID="17" EndNodeID="18" SectionID="11" AntennaPropertyID="29" Label="Antenna" HashId="11_Antenna" />
+    </Antenna>
+    <Antenna ID="10">
+      <AntennaMember ID="12" RefID="10" StartNodeID="19" EndNodeID="20" SectionID="12" AntennaPropertyID="30" Label="Antenna" HashId="12_Antenna" />
+    </Antenna>
+    <Antenna ID="11">
+      <AntennaMember ID="13" RefID="11" StartNodeID="21" EndNodeID="22" SectionID="13" AntennaPropertyID="31" Label="Antenna" HashId="13_Antenna" />
+    </Antenna>
+    <Antenna ID="12">
+      <AntennaMember ID="14" RefID="12" StartNodeID="23" EndNodeID="24" SectionID="14" AntennaPropertyID="33" Label="Antenna" HashId="14_Antenna" />
+    </Antenna>
+    <Antenna ID="13">
+      <AntennaMember ID="15" RefID="13" StartNodeID="25" EndNodeID="26" SectionID="15" AntennaPropertyID="34" Label="Antenna" HashId="15_Antenna" />
+    </Antenna>
+    <Antenna ID="14">
+      <AntennaMember ID="16" RefID="14" StartNodeID="27" EndNodeID="28" SectionID="16" AntennaPropertyID="35" Label="Antenna" HashId="16_Antenna" />
+    </Antenna>
+    <Antenna ID="15">
+      <AntennaMember ID="17" RefID="15" StartNodeID="29" EndNodeID="30" SectionID="17" AntennaPropertyID="36" Label="Antenna" HashId="17_Antenna" />
+    </Antenna>
+    <Antenna ID="16">
+      <AntennaMember ID="18" RefID="16" StartNodeID="31" EndNodeID="32" SectionID="18" AntennaPropertyID="37" Label="Antenna" HashId="18_Antenna" />
+    </Antenna>
+  </Antennas>
+  <LinearAppurtenancesSections>
+    <LinearAppurtenancesSection ID="1" Name="FlatBarProfile" Width="0.2" Depth="0.5" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00254" Y="0" Z="0.00635" HashId="1_-0.00254_0_0.00635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="1" X="0.00254" Y="0" Z="0.00635" HashId="1_0.00254_0_0.00635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="1" X="0.00254" Y="0" Z="-0.00635" HashId="1_0.00254_0_-0.00635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="1" X="-0.00254" Y="0" Z="-0.00635" HashId="1_-0.00254_0_-0.00635" />
+    <LinearAppurtenancesSection ID="2" Name="CircleProfile" Radius="0.99" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.025146" Y="0" Z="0" HashId="1_0.025146_0_0" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0250082475809306" Y="0" Z="0.00262847273732841" HashId="1_0.0250082475809306_0_0.00262847273732841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0245964995680523" Y="0" Z="0.00522814737730338" HashId="1_0.0245964995680523_0_0.00522814737730338" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0239152671587579" Y="0" Z="0.00777054134055243" HashId="1_0.0239152671587579_0_0.00777054134055243" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0229720140778808" Y="0" Z="0.0102277996267841" HashId="1_0.0229720140778808_0_0.0102277996267841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0217770748035635" Y="0" Z="0.012573" HashId="1_0.0217770748035635_0_0.012573" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0203435413405524" Y="0" Z="0.0147804479541465" HashId="1_0.0203435413405524_0_0.0147804479541465" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0186871197814546" Y="0" Z="0.0168259582274998" HashId="1_0.0186871197814546_0_0.0168259582274998" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0168259582274998" Y="0" Z="0.0186871197814546" HashId="1_0.0168259582274998_0_0.0186871197814546" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0147804479541465" Y="0" Z="0.0203435413405524" HashId="1_0.0147804479541465_0_0.0203435413405524" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.012573" Y="0" Z="0.0217770748035635" HashId="1_0.012573_0_0.0217770748035635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0102277996267841" Y="0" Z="0.0229720140778808" HashId="1_0.0102277996267841_0_0.0229720140778808" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.00777054134055243" Y="0" Z="0.0239152671587579" HashId="1_0.00777054134055243_0_0.0239152671587579" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.00522814737730338" Y="0" Z="0.0245964995680523" HashId="1_0.00522814737730338_0_0.0245964995680523" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.00262847273732841" Y="0" Z="0.0250082475809306" HashId="1_0.00262847273732841_0_0.0250082475809306" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="1.53969756866087E-18" Y="0" Z="0.025146" HashId="1_1.53969756866087E-18_0_0.025146" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00262847273732841" Y="0" Z="0.0250082475809306" HashId="1_-0.00262847273732841_0_0.0250082475809306" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00522814737730337" Y="0" Z="0.0245964995680523" HashId="1_-0.00522814737730337_0_0.0245964995680523" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00777054134055242" Y="0" Z="0.0239152671587579" HashId="1_-0.00777054134055242_0_0.0239152671587579" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0102277996267841" Y="0" Z="0.0229720140778808" HashId="1_-0.0102277996267841_0_0.0229720140778808" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.012573" Y="0" Z="0.0217770748035635" HashId="1_-0.012573_0_0.0217770748035635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0147804479541465" Y="0" Z="0.0203435413405524" HashId="1_-0.0147804479541465_0_0.0203435413405524" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0168259582274998" Y="0" Z="0.0186871197814546" HashId="1_-0.0168259582274998_0_0.0186871197814546" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0186871197814545" Y="0" Z="0.0168259582274999" HashId="1_-0.0186871197814545_0_0.0168259582274999" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0203435413405524" Y="0" Z="0.0147804479541465" HashId="1_-0.0203435413405524_0_0.0147804479541465" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0217770748035635" Y="0" Z="0.012573" HashId="1_-0.0217770748035635_0_0.012573" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0229720140778808" Y="0" Z="0.0102277996267841" HashId="1_-0.0229720140778808_0_0.0102277996267841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0239152671587579" Y="0" Z="0.00777054134055243" HashId="1_-0.0239152671587579_0_0.00777054134055243" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0245964995680523" Y="0" Z="0.00522814737730338" HashId="1_-0.0245964995680523_0_0.00522814737730338" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0250082475809306" Y="0" Z="0.00262847273732842" HashId="1_-0.0250082475809306_0_0.00262847273732842" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.025146" Y="0" Z="3.07939513732175E-18" HashId="1_-0.025146_0_3.07939513732175E-18" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0250082475809306" Y="0" Z="-0.0026284727373284" HashId="1_-0.0250082475809306_0_-0.0026284727373284" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0245964995680523" Y="0" Z="-0.00522814737730337" HashId="1_-0.0245964995680523_0_-0.00522814737730337" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0239152671587579" Y="0" Z="-0.00777054134055243" HashId="1_-0.0239152671587579_0_-0.00777054134055243" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0229720140778808" Y="0" Z="-0.0102277996267841" HashId="1_-0.0229720140778808_0_-0.0102277996267841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0217770748035635" Y="0" Z="-0.012573" HashId="1_-0.0217770748035635_0_-0.012573" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0203435413405524" Y="0" Z="-0.0147804479541465" HashId="1_-0.0203435413405524_0_-0.0147804479541465" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0186871197814546" Y="0" Z="-0.0168259582274998" HashId="1_-0.0186871197814546_0_-0.0168259582274998" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0168259582274999" Y="0" Z="-0.0186871197814545" HashId="1_-0.0168259582274999_0_-0.0186871197814545" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0147804479541465" Y="0" Z="-0.0203435413405524" HashId="1_-0.0147804479541465_0_-0.0203435413405524" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.012573" Y="0" Z="-0.0217770748035635" HashId="1_-0.012573_0_-0.0217770748035635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.0102277996267841" Y="0" Z="-0.0229720140778808" HashId="1_-0.0102277996267841_0_-0.0229720140778808" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00777054134055243" Y="0" Z="-0.0239152671587579" HashId="1_-0.00777054134055243_0_-0.0239152671587579" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00522814737730339" Y="0" Z="-0.0245964995680523" HashId="1_-0.00522814737730339_0_-0.0245964995680523" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-0.00262847273732841" Y="0" Z="-0.0250082475809306" HashId="1_-0.00262847273732841_0_-0.0250082475809306" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="-4.61909270598262E-18" Y="0" Z="-0.025146" HashId="1_-4.61909270598262E-18_0_-0.025146" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0026284727373284" Y="0" Z="-0.0250082475809306" HashId="1_0.0026284727373284_0_-0.0250082475809306" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.00522814737730336" Y="0" Z="-0.0245964995680523" HashId="1_0.00522814737730336_0_-0.0245964995680523" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.00777054134055242" Y="0" Z="-0.0239152671587579" HashId="1_0.00777054134055242_0_-0.0239152671587579" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0102277996267841" Y="0" Z="-0.0229720140778808" HashId="1_0.0102277996267841_0_-0.0229720140778808" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.012573" Y="0" Z="-0.0217770748035635" HashId="1_0.012573_0_-0.0217770748035635" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0147804479541465" Y="0" Z="-0.0203435413405524" HashId="1_0.0147804479541465_0_-0.0203435413405524" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0168259582274998" Y="0" Z="-0.0186871197814546" HashId="1_0.0168259582274998_0_-0.0186871197814546" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0186871197814546" Y="0" Z="-0.0168259582274998" HashId="1_0.0186871197814546_0_-0.0168259582274998" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0203435413405524" Y="0" Z="-0.0147804479541465" HashId="1_0.0203435413405524_0_-0.0147804479541465" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0217770748035635" Y="0" Z="-0.012573" HashId="1_0.0217770748035635_0_-0.012573" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0229720140778808" Y="0" Z="-0.0102277996267841" HashId="1_0.0229720140778808_0_-0.0102277996267841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0239152671587579" Y="0" Z="-0.00777054134055243" HashId="1_0.0239152671587579_0_-0.00777054134055243" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0245964995680523" Y="0" Z="-0.00522814737730339" HashId="1_0.0245964995680523_0_-0.00522814737730339" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.0250082475809306" Y="0" Z="-0.00262847273732841" HashId="1_0.0250082475809306_0_-0.00262847273732841" />
+    <LinearAppurtenancePolyLine PolygonID="1" RefID="2" X="0.025146" Y="0" Z="-6.1587902746435E-18" HashId="1_0.025146_0_-6.1587902746435E-18" />
+  </LinearAppurtenancesSections>
+  <AppurtenanceNodes>
+    <AppurtenanceNode Id="0" X="-0.256605976856648" Y="0" Z="0.083376339291046" />
+    <AppurtenanceNode Id="1" X="-0.0631891492105746" Y="14.9352" Z="0.0205313999643766" />
+    <AppurtenanceNode Id="2" X="-0.0688469735214551" Y="14.9352" Z="0.0223697385922279" />
+    <AppurtenanceNode Id="3" X="0.128391800111945" Y="30.01804512" Z="-0.0417170263119082" />
+  </AppurtenanceNodes>
+  <AttachmentNodes />
+  <AppurtenanceProperties>
+    <AppurtenanceProperty ID="1" Label="FXL-1873 - 98.4844 (ft)" StartElevation="0" EndElevation="98.4844" Manufacturer="ANDREW" ModelName="FXL-1873" Location="" Depth="1.98" Width="1.98" ForceCoefficient="RND" Weight="0.67" AttachmentID="1" Classification="Existing" ComponentName="Appurtenance" />
+  </AppurtenanceProperties>
+  <Appurtenances>
+    <Appurtenance ID="1">
+      <AppurtenanceMember ID="39" AppurtenancePropertyID="1" RefId="1" SectionId="2" StartNodeID="1" EndNodeID="0" BetaAngle="0" Label="Appurtenance" HashId="39_1_-0.0631891492105746_14.9352_0.0205313999643766_-0.256605976856648_0_0.083376339291046_0_Appurtenance" />
+      <AppurtenanceMember ID="40" AppurtenancePropertyID="1" RefId="1" SectionId="2" StartNodeID="3" EndNodeID="2" BetaAngle="0" Label="Appurtenance" HashId="40_1_0.128391800111945_30.01804512_-0.0417170263119082_-0.0688469735214551_14.9352_0.0223697385922279_0_Appurtenance" />
+    </Appurtenance>
+  </Appurtenances>
+  <AttachmentProperties />
+  <Attachments />
+  <WindLoadParameters>
+    <WindLoadData WindID="1" Label="Wind Load Parameter" ComponentName="WindLoadParameter" DesignStandard="TIA-222-G" UltimateWindSpeed="139" BasicWindSpeed="60" IceWindSpeed="30" IceThickness="139" GroundElevation="N/A" BaseELevation="1" WindDirTrueNorth="All" RiskCategory="II" ExposureCategory="C" TopographicCategory="1" />
+  </WindLoadParameters>
+  <ProjectData ID="1" Label="Project Data" HashId="" ComponentName="ProjectData" Carr_Subject="" Carr_sitename="" Carr_siteNumber="" Carr_AnalysisType="" Carr_CarrierName="" Cust_siteid="" Cust_JobNumber="" Cust_SiteName="" Cust_City="" Cust_State="" Cust_Zip="" Cust_Address="" Cust_ProjectID="" Cust_Applicationid="" Cust_ApplicationRevisionid="" Cust_Name="" Site_Address="" Site_City="" Site_State="" Site_Zip="" Site_County="" Site_Lattitude="29.6875785" Site_Longitude="-95.6061195" Site_Altitude="-2.079676" />
+  <AnchorGuyFoundation />
+  <TowerInformation TowerID="TX0123" ComponentName="TowerInformation" Label="Tower Information" TowerName="TX0123" Description="" UnitSystem="English" Convention="OpenTower" BearingAngle="0" TowerType="Monopole" TowerHeight="99" TopFaceWidth="1.16666666666667" TopFaceDepth="N/A" BottomFaceWidth="3.83708333333333" BottomFaceDepth="N/A" NoofPanel="N/A" />
+  <TowerRatings TowerRatingID="1" Label="Tower Ratings" ComponentName="TowerRatings" GuyAnchorFoundationSoilInteraction="" GuyAnchorFoundationStructural="" GuyAnchorRod="" FoundationStructural="" FoundationSoilInteraction="" StructureRating="44.355" />
+</Staad>

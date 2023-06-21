@@ -1,0 +1,49 @@
+{
+  "name": "api-express-connector-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "copy-files": "copyfiles --error --up 1 server/Connector/assets/*/*.* dist",
+    "build": "npm run clean && npx tsc && npm run copy-files",
+    "start": "node dist/main.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/main.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@itwin/build-tools": "^3.5.1",
+    "@itwin/connector-framework": "^1.0.2",
+    "@itwin/core-backend": "^3.5.1",
+    "@itwin/core-bentley": "^3.5.1",
+    "@itwin/core-common": "^3.5.1",
+    "@itwin/core-geometry": "^3.5.1",
+    "@itwin/ecschema-metadata": "^3.5.1",
+    "@itwin/imodels-access-backend": "^2.2.1",
+    "@itwin/imodels-client-authoring": "^2.2.1",
+    "@types/object-hash": "^3.0.2",
+    "axios": "^1.4.0",
+    "copyfiles": "^2.4.1",
+    "cors": "^2.8.5",
+    "date-and-time": "^3.0.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "formdata-node": "^5.0.0",
+    "log4js": "^6.9.1",
+    "object-hash": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.2.5",
+    "concurrently": "^8.1.0",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.1.3"
+  }
+}
