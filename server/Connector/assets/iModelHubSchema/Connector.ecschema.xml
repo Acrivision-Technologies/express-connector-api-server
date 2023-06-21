@@ -154,7 +154,6 @@
         <ECProperty propertyName="ComponentName" typeName="string"></ECProperty>
         <ECProperty propertyName="SourceAppElementId" typeName="string"></ECProperty>
         <ECProperty propertyName="IconID" typeName="string"></ECProperty>
-        <ECProperty propertyName="DirectionVector" typeName="string"></ECProperty>
     </ECEntityClass>
     
     <ECEntityClass typeName="Attachment">

@@ -34,7 +34,6 @@ export interface TowerAntennaElementProps extends PhysicalElementProps {
     ComponentName: string;
     SourceAppElementId: string;
     IconID: string;
-    DirectionVector: string;
 
 }
 export class TowerAntennaElement extends PhysicalElement {
@@ -61,7 +60,6 @@ export class TowerAntennaElement extends PhysicalElement {
     public ComponentName: string;
     public SourceAppElementId: string;
     public IconID: string;
-    public DirectionVector: string;
 
 
     public constructor(props: TowerAntennaElementProps, iModel: IModelDb) {
@@ -87,7 +85,6 @@ export class TowerAntennaElement extends PhysicalElement {
         this.ComponentName = props.ComponentName
         this.SourceAppElementId = props.SourceAppElementId
         this.IconID = props.IconID
-        this.DirectionVector = props.DirectionVector
     }
 
     public override toJSON(): TowerAntennaElementProps {
@@ -113,7 +110,6 @@ export class TowerAntennaElement extends PhysicalElement {
         val.ComponentName = this.ComponentName;
         val.SourceAppElementId = this.SourceAppElementId;
         val.IconID = this.IconID;
-        val.DirectionVector = this.DirectionVector;
         return val;
     }
 
@@ -161,7 +157,6 @@ export class TowerAntennaElement extends PhysicalElement {
             ComponentName: antennaProperty['ComponentName'],
             SourceAppElementId: antennaProperty['SourceAppElementId'],
             IconID: antennaProperty['IconID'],
-            DirectionVector: antennaProperty['DirectionVector'],
         };
         if(elementID) {
             props.id = elementID;
