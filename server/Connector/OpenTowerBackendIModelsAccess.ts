@@ -167,8 +167,8 @@ export class OpenTowerBackendIModelsAccess extends BackendIModelsAccess {
     }
 
     async createNewIModel(arg: any) {
-        console.log("inside OpenTowerBackendIModelsAccess createNewIModel");
-        console.log(JSON.stringify(arg));
+        // console.log("inside OpenTowerBackendIModelsAccess createNewIModel");
+        // console.log(JSON.stringify(arg));
         // let getEcefLocationProps = {...arg.getEcefLocationProps};
 
         // console.log("getEcefLocationProps");
@@ -187,9 +187,9 @@ export class OpenTowerBackendIModelsAccess extends BackendIModelsAccess {
                 filePath: baselineFilePath
             }
         };
-        console.log(`createIModelFromBaselineParams`);
-        console.log(createIModelFromBaselineParams);
-        console.log(JSON.stringify(createIModelFromBaselineParams));
+        // console.log(`createIModelFromBaselineParams`);
+        // console.log(createIModelFromBaselineParams);
+        // console.log(JSON.stringify(createIModelFromBaselineParams));
         const iModel = await this._iModelsClient.iModels.createFromBaseline(createIModelFromBaselineParams);
         IModelJsFs.removeSync(baselineFilePath);
         return iModel.id;

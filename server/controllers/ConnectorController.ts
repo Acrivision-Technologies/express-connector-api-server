@@ -20,7 +20,7 @@ export class ConnectorController {
 
     private static downloadXml(accessUrl: any): Promise<any> {
         return new Promise((resolve: any, reject: any) => {
-            if(accessUrl) {
+            if (accessUrl) {
                 // let url = "https://projectsharedeveussa01.blob.core.windows.net/azuresqldbecpluginstorage/ProjectShare/File/0721bc08-99bb-4fa4-b329-f87ab357163c?sv=2019-07-07&sr=b&sig=Wls8UdWW8GbYPzNax4zpoy2NshkgA%2BVCSaqZN8bUA6E%3D&se=2023-06-20T12%3A17%3A07Z&sp=rw&rscd=attachment%3B%20filename%3D%22812356Otxml.otxml%22";
 
                 let config: AxiosRequestConfig = {
@@ -38,17 +38,17 @@ export class ConnectorController {
                         const splitArray: any = contentdisposition.split(";");
                         const filenameText = (splitArray[splitArray.length - 1]).replace(/"/g, '').replace(/'/g, '');
                         // console.log(`filenameText: ${filenameText}`);
-                        const filenameValueArray  = filenameText.split("=");
+                        const filenameValueArray = filenameText.split("=");
                         // console.log(`filenameValueArray: ${filenameValueArray}`);
                         const filename = filenameValueArray[filenameValueArray.length - 1];
                         // console.log(`filename: ${filename}`);
 
-                        let filePath = __dirname + "/../"+ process.env.sampleFileParentPath +"/" + filename;
-                        if(fs.existsSync(filePath)) {
+                        let filePath = __dirname + "/../" + process.env.sampleFileParentPath + "/" + filename;
+                        if (fs.existsSync(filePath)) {
                             fs.unlinkSync(filePath);
                         }
                         fs.writeFile(filePath, res.data, { flag: 'wx' }, function (err) {
-                            if (err)  {
+                            if (err) {
                                 reject(err);
                             } else {
                                 resolve(filename);
@@ -63,32 +63,26 @@ export class ConnectorController {
             } else {
                 resolve(null);
             }
-            
+
         })
 
     }
 
-    public static processIModelCreationRequest(requestBody : CreateIModelRequestParam): Promise<any> {
+
+
+    public static processIModelCreationRequest(requestBody: CreateIModelRequestParam): Promise<any> {
 
         return new Promise(async (resolve: any, reject: any) => {
-            try {   
+            try {
+                console.log('requestBody')
+                console.log(requestBody)
                 this.downloadXml(requestBody.accessUrl)
                     .then(async (filename: any) => {
                         await mainExecution(filename ? filename : requestBody.filename, requestBody.iModelName, requestBody.accessToken, requestBody.iTwinId)
                             .then((iModelGuid: any) => {
-                                let file = filename ? filename : requestBody.filename
-                                let filePath = __dirname + "/../"+ process.env.sampleFileParentPath +"/" + file;
-                                if(fs.existsSync(filePath)) {
-                                    fs.unlinkSync(filePath);
-                                }
                                 resolve(iModelGuid)
                             })
                             .catch((error: any) => {
-                                let file = filename ? filename : requestBody.filename
-                                let filePath = __dirname + "/../"+ process.env.sampleFileParentPath +"/" + file;
-                                if(fs.existsSync(filePath)) {
-                                    fs.unlinkSync(filePath);
-                                }
                                 reject(error)
                             })
                     })
@@ -96,16 +90,16 @@ export class ConnectorController {
                         reject(error);
                     })
 
-            } catch(e) {
+            } catch (e) {
                 reject(e)
             }
         })
     }
 
-    public static processIModelInsertElementsRequest(requestBody : any): Promise<any> {
+    public static processIModelInsertElementsRequest(requestBody: any): Promise<any> {
         return new Promise(async (resolve: any, reject: any) => {
             try {
-                new IModelInsertElementService(requestBody).insertIModeElements(requestBody)
+                new IModelInsertElementService().insertIModeElements(requestBody)
                     .then((result: any) => {
                         resolve("Done")
                     })
@@ -114,17 +108,17 @@ export class ConnectorController {
                         // console.log(error);
                         reject(error);
                     })
-                
-            } catch(e) {
+
+            } catch (e) {
                 reject(e)
             }
         })
     }
-    
-    public static processIModelUpdateElementsRequest(requestBody : any): Promise<any> {
+
+    public static processIModelUpdateElementsRequest(requestBody: any): Promise<any> {
         return new Promise(async (resolve: any, reject: any) => {
             try {
-                new IModelInsertElementService(requestBody).updateIModeElements(requestBody)
+                new IModelInsertElementService().updateIModeElements(requestBody)
                     .then((result: any) => {
                         resolve("Done")
                     })
@@ -133,16 +127,16 @@ export class ConnectorController {
                         // console.log(error);
                         reject(error);
                     })
-                
-            } catch(e) {
+
+            } catch (e) {
                 reject(e)
             }
         })
     }
-    public static processIModelDeleteElementsRequest(requestBody : any): Promise<any> {
+    public static processIModelDeleteElementsRequest(requestBody: any): Promise<any> {
         return new Promise(async (resolve: any, reject: any) => {
             try {
-                new IModelInsertElementService(requestBody).deleteIModeElements(requestBody)
+                new IModelInsertElementService().deleteIModeElements(requestBody)
                     .then((result: any) => {
                         resolve("Done")
                     })
@@ -151,8 +145,8 @@ export class ConnectorController {
                         // console.log(error);
                         reject(error);
                     })
-                
-            } catch(e) {
+
+            } catch (e) {
                 reject(e)
             }
         })

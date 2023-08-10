@@ -33,6 +33,9 @@ export class TowerMountBuilder {
                 const endNode = mountNodes.find((node: any) => node["ID"] == mountElement['EndNodeID']);
                 const mountSection = sections.find((section: any) => section["ID"] == mountElement["SectionID"]);
                 const name = "Mount_" + mount['ID'] + "_Member_" + mountElement["ID"];
+
+                
+                
                 let shapeID = this.createShape(startNode, endNode, mountSection, name);
                 if(shapeID) {
                     this._builder.appendGeometryPart3d(shapeID);
@@ -57,30 +60,35 @@ export class TowerMountBuilder {
         const mountShape = Cone.createAxisPoints(pointA, pointB, mountRadius, mountRadius, true);
         let mountShapeID: Id64String = "";
         if (mountShape) {
-            mountShapeID = this.insertGeometryPart(name, mountShape);
+            mountShapeID = this.insertGeometryPart(name, mountShape)!;
         }
         return mountShapeID;
 
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "mount");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Mounts);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "mount");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Mounts);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while Mount Guy element")
+            console.log(e)
+        }
     }
 
 

@@ -16,28 +16,42 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
 
     createFromBaseline = async (params: any) => {
         try {
-            console.log("inside createFromBaseline")
+            // console.log("inside createFromBaseline")
             const baselineFileSize = await this._options.localFileSystem?.getFileSize(params.iModelProperties.filePath);
             const createdIModel = await this.openTowerSendIModelPostRequest(params);
             params.iModelProperties.iModelId = createdIModel;
 
-            console.log(`baselineFileSize: ${baselineFileSize}`);
+            // console.log(`baselineFileSize: ${baselineFileSize}`);
 
             // Acquire IModel Lock, to start Seed process
             const acquireIModelLock = await this.acquireIModelLock(params);
-            console.log(`acquireIModelLock: ${JSON.stringify(acquireIModelLock)}`)
+            // console.log(`acquireIModelLock: ${JSON.stringify(acquireIModelLock)}`)
             // Initiate SeedFile Instance
             const seedFileRseponse = await this.initiateSeedFileInstance(params);
 
+            // console.log("seedFileRseponse");
+            // console.log(JSON.stringify(seedFileRseponse));
+
             const seedFileInstanceId = seedFileRseponse.changedInstance.instanceAfterChange.instanceId;
+            // console.log(`seedFileInstanceId: ${seedFileInstanceId}`)
             params.iModelProperties.seedFileInstanceId = seedFileInstanceId;
             const updateResult = await this.updateSeedFileMetaData(params);
+            // console.log("updateResult");
+            // console.log(JSON.stringify(updateResult));
             params.iModelProperties.seedUploadUrl = updateResult.changedInstance.instanceAfterChange.relationshipInstances[0].relatedInstance.properties.UploadUrl;
             params.iModelProperties.FileId = updateResult.changedInstance.instanceAfterChange.properties.FileId;
-            const uploadResult = await this.uploadSeedFile(params);
+            // console.log(`params.iModelProperties.seedUploadUrl: ${params.iModelProperties.seedUploadUrl}`)
+            // console.log(`params.iModelProperties.FileId: ${params.iModelProperties.FileId}`)
+            const uploadSeedFileResult = await this.uploadSeedFile(params);
+            // console.log("uploadSeedFileResult");
+            // console.log(uploadSeedFileResult);
             const statusUploadStatus = await this.updateIModelSeedFileUploadedStatus(params);
+            // console.log("statusUploadStatus: ")
+            // console.log(JSON.stringify(statusUploadStatus))
             const processStatus =  await this.waitForBaselineFileInitialization(params);
             const releaseIModelLockResult = await this.releaseIModelLock(params);
+            // console.log("releaseIModelLockResult");
+            // console.log(releaseIModelLockResult);
             return { id: createdIModel };
         } catch (e) {
             console.log("inside createFromBaseline error case")
@@ -167,6 +181,9 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
         })
     }
     uploadSeedFile = async (params: any): Promise<any> => {
+        console.log("inside uploadSeedFile");
+        console.log("params");
+        console.log(JSON.stringify(params));
         return new Promise(async (resolve: any, reject: any) => {
             try {
                 const result = await this._options.cloudStorage.upload({
@@ -184,6 +201,7 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
     }
 
     updateIModelSeedFileUploadedStatus = async (params: any): Promise<any> => {
+        console.log("updateIModelSeedFileUploadedStatus")
         return new Promise(async (resolve: any, reject: any) => {
             try {
                 const tokenResponse: any = await params.authorization();
@@ -192,6 +210,8 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
                 const fileName = (params.iModelProperties.filePath.split(path.sep)).pop();
 
                 const fileStats: any = IModelJsFs.lstatSync(params.iModelProperties.filePath);
+                // console.log('fileStats');
+                // console.log(fileStats);
                 let requestBody: any = {
                     "instance": {
                         "instanceId": params.iModelProperties.seedFileInstanceId,
@@ -204,6 +224,8 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
                         }
                     }
                 }
+                // console.log('requestBody');
+                // console.log(requestBody);
                 new OpenTowerIModelApiService().updateIModelSeedFileInstance(accessToken, url, requestBody)
                     .then((res: any) => {
                         resolve(res);
@@ -234,6 +256,8 @@ export class IModelOperations<TOptions extends OpenTowerOperationOptions> extend
                 const state = result.instances[0].properties.InitializationState;
                 if (state == 0) {
                     return true;
+                } else if (state == 3) {
+                    throw new Error("Error uploading the baseline file");
                 } else {
 
                     await this.wait(1000);

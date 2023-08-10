@@ -101,17 +101,17 @@ export class TowerMountPipeElement extends PhysicalElement {
         return new Code({ spec: codeSpec.id, scope, value: codeValue });
     }
 
-    public static create(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String, mountNodes: any, sections: any, mountPipeProperty: any, mountPipes: any, sourceEleID: any): PhysicalElement {
+    public static create(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String, mountNodes: any, sections: any, mountPipeProperty: any, mountPipes: any, sourceEleID: any, mountProperties: any): PhysicalElement {
         const categoryId = SpatialCategory.queryCategoryIdByName(imodel, definitionModelId, Categories.Mounts);
         if (undefined === categoryId) {
             throw new IModelError(IModelStatus.BadElement, "Unable to find category id for StandardConnector category for createTowerMountPipeElement");
         }
-        return this.createTowerMountPipeElement(imodel, physicalModelId, definitionModelId, mountNodes, sections, mountPipeProperty, mountPipes, sourceEleID, categoryId, new TowerMountPipeBuilder(imodel, definitionModelId, categoryId), this.classFullName);
+        return this.createTowerMountPipeElement(imodel, physicalModelId, definitionModelId, mountNodes, sections, mountPipeProperty, mountPipes, sourceEleID, mountProperties, categoryId, new TowerMountPipeBuilder(imodel, definitionModelId, categoryId, mountPipeProperty), this.classFullName);
     }
 
-    protected static createTowerMountPipeElement(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String,  mountNodes: any, sections: any, mountPipeProperty: any, mountPipes: any, sourceEleID: any, categoryId: any, mountPipeBuilder: TowerMountPipeBuilder, classFullName: string): PhysicalElement {
+    protected static createTowerMountPipeElement(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String,  mountNodes: any, sections: any, mountPipeProperty: any, mountPipes: any, sourceEleID: any, mountProperties: any, categoryId: any, mountPipeBuilder: TowerMountPipeBuilder, classFullName: string): PhysicalElement {
         const code = this.createCode(imodel, physicalModelId, sourceEleID);
-        const stream = mountPipeBuilder.createGeometry(mountPipes, mountNodes, sections);
+        const stream = mountPipeBuilder.createGeometry(mountPipes, mountNodes, sections, mountProperties);
         const props: TowerMountPipeElementProps = {
             code,
             category: categoryId,

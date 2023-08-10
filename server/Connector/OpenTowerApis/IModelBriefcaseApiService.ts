@@ -15,7 +15,7 @@ export class IModelBriefcaseApiService {
     acquireNewBriefcaseId = async (url: string, accessToken: string, reformUrl? : boolean, iModelId?: string, changesetId? : any): Promise<any> => {
         return await new Promise(async(resolve: any, reject: any) => {
 
-            console.log(`changesetId==> ${changesetId}`);
+            // console.log(`changesetId==> ${changesetId}`);
 
             if(reformUrl) {
                 url = `${this.clientEndPoint}/${this.apiVersion}/${this.createIModelBriefcaseRequestPath}`.replace("{iModelId}", iModelId ?? '')
@@ -45,15 +45,15 @@ export class IModelBriefcaseApiService {
                       }
                 }
 
-                console.log(`body`);
-                console.log(body);
+                // console.log(`body`);
+                // console.log(body);
                 console.log(`url`);
                 console.log(url);
 
                 await axios.post(url, body, requestConfig)
                     .then((res: AxiosResponse) => {
-                        console.log('res');
-                        console.log(res);
+                        // console.log('res');
+                        // console.log(res);
                         const briefcaseId: string = res.data.changedInstance.instanceAfterChange.instanceId;
                         const briefcaseDownloadUrl: string = res.data.changedInstance.instanceAfterChange.relationshipInstances[0].relatedInstance.properties.DownloadUrl;
                         let response: any = {

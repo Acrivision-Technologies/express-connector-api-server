@@ -173,4 +173,72 @@ export class TowerAntennaElement extends PhysicalElement {
             return imodel.elements.createElement(props);
         }
     }
+
+    public static createLine(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String, antennaProperty: any, antennaElement: any, startNode: any, endNode: any, sourceEleID: any, elementID: any): PhysicalElement {
+        const categoryId = SpatialCategory.queryCategoryIdByName(imodel, definitionModelId, Categories.Mounts);
+        if (undefined === categoryId) {
+            throw new IModelError(IModelStatus.BadElement, "Unable to find category id for StandardConnector category for createTowerAntennaElement");
+        }
+        return this.createTowerAntennaLineElement(imodel, physicalModelId, definitionModelId, antennaProperty, antennaElement, startNode, endNode, sourceEleID, elementID, categoryId, new TowerAntennaBuilder(imodel, definitionModelId, categoryId, antennaProperty), this.classFullName);
+    }
+
+    protected static createTowerAntennaLineElement(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String, antennaProperty: any, antennaElement: any, startNode: any, endNode: any, sourceEleID: any, elementID: any, categoryId: any, antennaBuilder: TowerAntennaBuilder, classFullName: string): PhysicalElement {
+        // const elementID =  'Antenna_' + antennaProperty["ID"] + "_Line";
+        // const code = ConnectorGroup.createCode(imodel, physicalModelId, elementID);
+        const code = this.createCode(imodel, physicalModelId, sourceEleID);
+
+        if (undefined === categoryId) {
+            throw new IModelError(IModelStatus.BadElement, "Unable to find category id for StandardConnector category");
+        }
+
+        const stream = antennaBuilder.createLineGeometry(categoryId, startNode, endNode);
+
+        const props: TowerAntennaElementProps = {
+            code,
+            category: categoryId,
+            model: physicalModelId,
+            classFullName,
+            geom: stream,
+            AntennaPropertyID: antennaProperty['ID'],
+            Label: antennaProperty['Label'],
+            Name: antennaProperty['Name'],
+            Elevation: antennaProperty['Elevation'],
+            Manufacturer: antennaProperty['Manufacturer'],
+            ModelName: antennaProperty['ModelName'],
+            Type: antennaProperty['Type'],
+            Location: antennaProperty['Location'],
+            Azimuth: antennaProperty['Azimuth'],
+            AntennaAzmith: antennaProperty['AntennaAzmith'],
+            LateralOffset: antennaProperty['LateralOffset'],
+            VerticalOffset: antennaProperty['VerticalOffset'],
+            HorizontalOffset: antennaProperty['HorizontalOffset'],
+            Height: antennaProperty['Height'],
+            Width: antennaProperty['Width'],
+            Depth: antennaProperty['Depth'],
+            Weight: antennaProperty['Weight'],
+            Classification: antennaProperty['Classification'],
+            ComponentName: antennaProperty['ComponentName'],
+            SourceAppElementId: antennaProperty['SourceAppElementId'],
+            IconID: antennaProperty['IconID'],
+        };
+
+        console.log("------------------------------------ TowerLineAntennaElementProps");
+        console.log(props);
+        console.log("elementID: ", elementID)
+        if(elementID) {
+            props.id = elementID;
+            try {
+                imodel.elements.updateElement(props);
+                
+                return imodel.elements.getElement(elementID);
+            } catch(e) {
+                console.log(`Error while updating the element`);
+                console.log(e);
+                throw new IModelError(IModelStatus.BadRequest, "IModel update failed");
+            }
+        } else {
+            console.log("inside insert")
+            return imodel.elements.createElement(props);
+        }
+    }
 }

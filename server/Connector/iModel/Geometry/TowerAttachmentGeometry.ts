@@ -50,7 +50,9 @@ export class TowerAttachmentBuilder {
             });
 
             const section = sections.find((section: any) => section["ID"] == attahcmentMember['SectionId']);
-            const name = "Antenna_" + attahcmentMember['AttachmentPropertyID'] + "_Member_" + attahcmentMember["ID"];
+            const name = "Attachment_" + attahcmentMember['AttachmentPropertyID'] + "_Member_" + attahcmentMember["ID"];
+            console.log("name: ", name);
+            console.log("section['Name']: ", section['Name']);
             if(section['Name'] === 'HollowCircleProfile') {
                 this.createHollowCircleProfile(startNode, endNode, section, name);
             } else {
@@ -68,9 +70,15 @@ export class TowerAttachmentBuilder {
         const pointA = Point3d.create(startNode['X'], startNode['Y'], startNode['Z']);
         const pointB = Point3d.create(endNode['X'], endNode['Y'], endNode['Z']);
 
+        console.log("pointA: ", JSON.stringify(pointA))
+        console.log("pointB: ", JSON.stringify(pointB))
+        console.log("radius", radius)
+
         const shape =  Cone.createAxisPoints(pointA, pointB, radius, radius, true);
+        console.log("shape")
+        console.log(JSON.stringify(shape));
         if(shape) {
-            let shapeID = this.insertGeometryPart(name, shape);
+            let shapeID = this.insertGeometryPart(name, shape)!;
             this._builder.appendGeometryPart3d(shapeID);
         }
 
@@ -82,7 +90,7 @@ export class TowerAttachmentBuilder {
 
         const shape =  this.createDgnShape(convertInchToMeter(section['Width']), length, convertInchToMeter(section['Thickness']));
         if(shape) {
-            let shapeID = this.insertGeometryPart(name, shape);
+            let shapeID = this.insertGeometryPart(name, shape)!;
             let origin = new Point3d(startNode['X'], startNode['Y'], startNode['Z']);
 
             let degree =  getSlopeAngle(startNode, endNode);
@@ -126,24 +134,32 @@ export class TowerAttachmentBuilder {
         return Box.createDgnBox(baseOrigin, vectorX, vectorY, topOrigin, baseX, baseY, topX, topY, true);
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "attachement");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Attachment);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "attachement");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Attachment);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
 
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+            console.log('geometryPartProps')
+            console.log(JSON.stringify(geometryPartProps))
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting attachment element")
+            console.log(e)
+        }
     }
 
 

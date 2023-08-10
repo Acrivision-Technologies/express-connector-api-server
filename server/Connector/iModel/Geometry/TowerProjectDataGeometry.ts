@@ -23,40 +23,45 @@ export class TowerProjectDataBuilder {
 
 
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive, origin?: any): Id64String | null => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "antenna");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Antenna);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-        if(origin)
-            geometryStreamBuilder.setLocalToWorld3d(origin);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const code = GeometryPart.createCode(this._imodel, this._definitionModelId, name);
-        let geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: code,
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive, origin?: any): Id64String | undefined => {
         try {
-            const element = this._imodel.elements.getElement<GeometryPart>(code, GeometryPart);
-            if(element) {
-                geometryPartProps.id = element.id;
-                this._imodel.elements.updateElement(geometryPartProps);
-
-                const elementAfterUpdate = this._imodel.elements.getElement<GeometryPart>(code, GeometryPart);
-                return element.id;
-            } else {
-                return null;
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "antenna");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Antenna);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+            if(origin)
+                geometryStreamBuilder.setLocalToWorld3d(origin);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const code = GeometryPart.createCode(this._imodel, this._definitionModelId, name);
+            let geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: code,
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+            try {
+                const element = this._imodel.elements.getElement<GeometryPart>(code, GeometryPart);
+                if(element) {
+                    geometryPartProps.id = element.id;
+                    this._imodel.elements.updateElement(geometryPartProps);
+    
+                    const elementAfterUpdate = this._imodel.elements.getElement<GeometryPart>(code, GeometryPart);
+                    return element.id;
+                } else {
+                    return this._imodel.elements.insertElement(geometryPartProps);
+                }
+            } catch(e) {
+                // console.log(`geometryPartProps error: Not found`);
+                // console.log(e);
+                return this._imodel.elements.insertElement(geometryPartProps);
             }
         } catch(e) {
-            // console.log(`geometryPartProps error: Not found`);
-            // console.log(e);
-            return this._imodel.elements.insertElement(geometryPartProps);
+            console.log("Error while inserting project data")
+            console.log(e)
         }
     }
 

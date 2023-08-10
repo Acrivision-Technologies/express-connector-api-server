@@ -29,14 +29,14 @@ export class TowerPoleBuilder {
         const endNode = nodes.find((node: any) => node["ID"] == pole['EndNodeID']);
         const name = "Pole_" + pole['PolePropertyID'] + "_Member_" + pole["ID"];
 
-        const topRadius = convertFeetToMeter(this.poleProperty['TopFlatDiameter']) / 2;
-        const bottomRadius = convertFeetToMeter(this.poleProperty['BottomFlatDiameter']) / 2;
+        const topRadius = convertInchToMeter(this.poleProperty['TopFlatDiameter']) / 2;
+        const bottomRadius = convertInchToMeter(this.poleProperty['BottomFlatDiameter']) / 2;
         const pointA = Point3d.create(startNode['X'], startNode['Y'], startNode['Z']);
         const pointB = Point3d.create(endNode['X'], endNode['Y'], endNode['Z']);
 
         const shape = Cone.createAxisPoints(pointA, pointB, topRadius, bottomRadius, true);
         if (shape) {
-            let shapeID = this.insertGeometryPart(name, shape);
+            let shapeID = this.insertGeometryPart(name, shape)!;
             this._builder.appendGeometryPart3d(shapeID);
         }
 
@@ -44,24 +44,30 @@ export class TowerPoleBuilder {
 
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "pole");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Poles);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
 
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "pole");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Poles);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("error inserting Pole element");
+            console.log(e)
+        }
     }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Staad>
-<TowerInformation TowerID="xxxxx" ComponentName="TowerInformation" SourceAppElementId="xxxxx" Label="Tower Information" TowerName="xxxxxx" Description="xxxxxx" UnitSystem="English" Convention="True" BearingAngle="xxxxx" TowerType="SelfSupported" TowerHeight="194.3333" TopFaceWidth="11.8516" TopFaceDepth="11.8516" BottomFaceWidth="29.6667" BottomFaceDepth="29.6667" NoofPanel="10" NoOfLegs="3"/>
+	<TowerInformation TowerID="xxxxx" ComponentName="TowerInformation" SourceAppElementId="xxxxx" Label="Tower Information" TowerName="xxxxxx" Description="xxxxxx" UnitSystem="English" Convention="True" BearingAngle="xxxxx" TowerType="SelfSupported" TowerHeight="194.3333" TopFaceWidth="11.8516" TopFaceDepth="11.8516" BottomFaceWidth="29.6667" BottomFaceDepth="29.6667" NoofPanel="10" NoOfLegs="3"/>
     <Sections>
 		<Section ID="1" Name="HollowCircleProfile" Radius="0.02804414" WallThickness="0.0208333333333333" />
 		<Section ID="2" Name="HollowCircleProfile" Radius="0.01825625" WallThickness="0.0208333333333333" />

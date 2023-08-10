@@ -30,10 +30,13 @@ export class TowerGuyBuilder {
             guyElements.forEach((guyElement: any) => {
                 let startNodeId = guyElement['StartNodeID'] ? guyElement['StartNodeID'] : guyElement['StartNodeId'];
                 let endNodeId = guyElement['EndNodeID'] ? guyElement['EndNodeID'] : guyElement['EndNodeId'];
-                let sectionId = guyElement['SectionID'] ? guyElement['SectionID'] : guyElement['SectionId'];
+                // let sectionId = guyElement['SectionID'] ? guyElement['SectionID'] : guyElement['SectionId'];
+                let sectionId = 2;
                 const startNode = guyNodes.find((node: any) => node["ID"] == startNodeId);
                 const endNode = guyNodes.find((node: any) => node["ID"] == endNodeId);
                 const guySection = sections.find((section: any) => section["ID"] == sectionId);
+                console.log("guySection");
+                console.log(guySection);
                 const name = "Guy_" + guy['ID'] + "_Member_" + guyElement["ID"];
                 let shapeID = this.createShape(startNode, endNode, guySection, name);
                 if(shapeID) {
@@ -47,7 +50,7 @@ export class TowerGuyBuilder {
 
     public createShape = (startNode: any, endNode: any, section: any, name: string) => {
 
-        let guyRadius = convertInchToMeter(0.02);
+        let guyRadius = convertInchToMeter(2);
         if(section) {
             if(section['Radius']) {
                 guyRadius =  convertInchToMeter(section['Radius']);
@@ -61,30 +64,35 @@ export class TowerGuyBuilder {
         const guyShape = Cone.createAxisPoints(pointA, pointB, guyRadius, guyRadius, true);
         let guyShapeID: Id64String = "";
         if (guyShape) {
-            guyShapeID = this.insertGeometryPart(name, guyShape);
+            guyShapeID = this.insertGeometryPart(name, guyShape)!;
         }
         return guyShapeID;
 
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "guy");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Guys);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "guy");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Guys);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting Guy element")
+            console.log(e)
+        }
     }
 
 

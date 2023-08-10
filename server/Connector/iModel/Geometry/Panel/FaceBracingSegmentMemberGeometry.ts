@@ -27,7 +27,7 @@ export class FaceBracingSegmentMemberGeometry {
 
         let baseShapePartID: Id64String = "";
         if (cylinder) {
-            baseShapePartID = this.insertGeometryPart(name, cylinder);
+            baseShapePartID = this.insertGeometryPart(name, cylinder)!;
         }
 
         return baseShapePartID;
@@ -177,24 +177,29 @@ export class FaceBracingSegmentMemberGeometry {
     }
 
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-
-        const params = new GeometryParams(this._categoryId, "t-shape");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.FaceBracing);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+    
+            const params = new GeometryParams(this._categoryId, "t-shape");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.FaceBracing);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting bracing element");
+            console.log(e)
+        }
     }
 }

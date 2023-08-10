@@ -1,0 +1,18 @@
+<Sections>
+		<Section ID="1" Name="HollowCircleProfile" Radius="0.0301625" WallThickness="0.0039116"/>
+		<Section ID="2" Name="LShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0048" FilletRadius="0" EdgeRadius="0" />
+		<Section ID="3" Name="HollowCircleProfile" Radius="0.0571" WallThickness="0.0056" />
+		<Section ID="4" Name="LShapeProfile" Width="0.0635" Depth="0.0635" Thickness="0.0095" FilletRadius="0" EdgeRadius="0" />
+		<Section ID="5" Name="HollowCircleProfile" Radius="0.0211" WallThickness="0.0033" />
+		<Section ID="6" Name="DoubleLShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.0063" Spacing="0" FilletRadius="0.0048" EdgeRadius="0" />
+		<Section ID="7" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.3125" Spacing="0" FilletRadius="0.234375" EdgeRadius="0" />
+		<Section ID="8" Name="LShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.0063" FilletRadius="0" EdgeRadius="0" />
+		<Section ID="9" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0063" Spacing="0" FilletRadius="0.0048" EdgeRadius="0" />
+		<Section ID="10" Name="HollowCircleProfile" Radius="0.0302" WallThickness="0.0036" />
+		<Section ID="11" Name="DoubleLShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.125" Spacing="0" FilletRadius="0.09375" EdgeRadius="0" />
+		<Section ID="12" Name="LShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.125" FilletRadius="0" EdgeRadius="0" />
+		<Section ID="13" Name="LShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.125" FilletRadius="0" EdgeRadius="0" />
+		<Section ID="14" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0048" Spacing="0" FilletRadius="0.140625" EdgeRadius="0" />
+		<Section ID="15" Name="HollowCircleProfile" Radius="0.0571" WallThickness="0.0056" />
+		<Section ID="16" Name="HollowCircleProfile" Radius="0.0302" WallThickness="0.0036" />
+	</Sections>

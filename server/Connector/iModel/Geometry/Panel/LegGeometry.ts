@@ -87,36 +87,41 @@ export class LegGeometry {
 
         let legShapeID: Id64String = "";
         if (legShape) {
-            legShapeID = this.insertGeometryPart(name, legShape);
+            legShapeID = this.insertGeometryPart(name, legShape)!;
         }
         return legShapeID;
 
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params:GeometryParams = new GeometryParams(this._categoryId, "leg-cone-shape");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Legs);
-        params.lineColor = params.fillColor;
-        const thematicOptions: ThematicGradientSettingsProps = {
-            mode: ThematicGradientMode.Stepped,
-            stepCount: 16,
-            colorScheme: ThematicGradientColorScheme.Monochrome
-
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params:GeometryParams = new GeometryParams(this._categoryId, "leg-cone-shape");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Legs);
+            params.lineColor = params.fillColor;
+            const thematicOptions: ThematicGradientSettingsProps = {
+                mode: ThematicGradientMode.Stepped,
+                stepCount: 16,
+                colorScheme: ThematicGradientColorScheme.Monochrome
+    
+            }
+            params.gradient = Gradient.Symb.createThematic(ThematicGradientSettings.fromJSON(thematicOptions));
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting Leg element");
+            console.log(e)
         }
-        params.gradient = Gradient.Symb.createThematic(ThematicGradientSettings.fromJSON(thematicOptions));
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
     }
 }

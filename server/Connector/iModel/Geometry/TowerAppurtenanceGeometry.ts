@@ -40,7 +40,7 @@ export class TowerAppurtenanceBuilder {
 
             const shape = Cone.createAxisPoints(pointA, pointB, radius, radius, true);
             if (shape) {
-                let shapeID = this.insertGeometryPart(name, shape);
+                let shapeID = this.insertGeometryPart(name, shape)!;
                 // let origin = new Point3d(toNumber(startNode['Z']), toNumber(startNode['X']), toNumber(startNode['Y']));
                 this._builder.appendGeometryPart3d(shapeID);
             }
@@ -51,24 +51,29 @@ export class TowerAppurtenanceBuilder {
 
     }
 
-    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "attachement");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.Appurtenance);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: this._definitionModelId,
-            code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+    private insertGeometryPart = (name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "attachement");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.Appurtenance);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: this._definitionModelId,
+                code: GeometryPart.createCode(this._imodel, this._definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting attachment element")
+            console.log(e)
+        }
     }
 
 

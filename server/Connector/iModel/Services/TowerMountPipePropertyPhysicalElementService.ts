@@ -16,9 +16,10 @@ export class TowerMountPipePropertyPhysicalElementService {
     private physicalModelId: any;
     private mountPipeProperty: any;
     private mountNodes: any;
+    private mountProperties: any;
     private sections: any;
 
-    constructor(synchronizer: any, jobSubject: any, repositoryLinkId: any, definitionModelId: any, physicalModelId: any, mountPipeProperty: any, mountNodes: any, sections: any) {
+    constructor(synchronizer: any, jobSubject: any, repositoryLinkId: any, definitionModelId: any, physicalModelId: any, mountPipeProperty: any, mountNodes: any, sections: any, mountProperties: any) {
 
         this.synchronizer = synchronizer;
         this.jobSubject = jobSubject;
@@ -27,6 +28,7 @@ export class TowerMountPipePropertyPhysicalElementService {
         this.physicalModelId = physicalModelId;
         this.mountPipeProperty = mountPipeProperty;
         this.mountNodes = mountNodes;
+        this.mountProperties = mountProperties;
         this.sections = sections;
     }
 
@@ -51,7 +53,7 @@ export class TowerMountPipePropertyPhysicalElementService {
 
 
         let element: PhysicalElement;
-        element = TowerMountPipeElement.create(this.synchronizer.imodel, this.physicalModelId, this.definitionModelId, this.mountNodes, this.sections, this.mountPipeProperty, mountPipes, sourceEleID);
+        element = TowerMountPipeElement.create(this.synchronizer.imodel, this.physicalModelId, this.definitionModelId, this.mountNodes, this.sections, this.mountPipeProperty, mountPipes, sourceEleID, this.mountProperties);
         if(element) {
             if (undefined !== results.id) {
                 element.id = results.id;

@@ -63,25 +63,25 @@ export class TowerAttachmentPropertyPhysicalElementService {
             this.synchronizer.updateIModel(sync, sourceItem);
 
 
-            const groupCode = TowerAttachmentElement.createCode(this.synchronizer.imodel, this.jobSubject.id, sourceEleID);
-            const groupElement = this.synchronizer.imodel.elements.queryElementIdByCode(groupCode);
+            // const groupCode = TowerAttachmentElement.createCode(this.synchronizer.imodel, this.jobSubject.id, sourceEleID);
+            // const groupElement = this.synchronizer.imodel.elements.queryElementIdByCode(groupCode);
 
-            assert(groupElement !== undefined);
-            let doCreate = results.state === ItemState.New;
+            // assert(groupElement !== undefined);
+            // let doCreate = results.state === ItemState.New;
 
-            if (results.state === ItemState.Changed) {
-                try {
-                    ElementGroupsMembers.getInstance(this.synchronizer.imodel, { sourceId: groupElement, targetId: element.id });
-                    doCreate = false;
-                } catch (err) {
-                    doCreate = true;
-                }
-            }
+            // if (results.state === ItemState.Changed) {
+            //     try {
+            //         ElementGroupsMembers.getInstance(this.synchronizer.imodel, { sourceId: groupElement, targetId: element.id });
+            //         doCreate = false;
+            //     } catch (err) {
+            //         doCreate = true;
+            //     }
+            // }
 
-            if (doCreate) {
-                const rel = ElementGroupsMembers.create(this.synchronizer.imodel, groupElement, sync.elementProps.id!);
-                rel.insert();
-            }
+            // if (doCreate) {
+            //     const rel = ElementGroupsMembers.create(this.synchronizer.imodel, groupElement, sync.elementProps.id!);
+            //     rel.insert();
+            // }
 
         }
 

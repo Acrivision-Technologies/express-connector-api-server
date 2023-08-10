@@ -2,22 +2,22 @@
 
 <Staad>
 	<Sections>
-		<Section ID="1" Name="HollowCircleProfile" Radius="0.0301625" WallThickness="0.0039116"/>
-		<Section ID="2" Name="LShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0048" FilletRadius="0" EdgeRadius="0" />
-		<Section ID="3" Name="HollowCircleProfile" Radius="0.0571" WallThickness="0.0056" />
-		<Section ID="4" Name="LShapeProfile" Width="0.0635" Depth="0.0635" Thickness="0.0095" FilletRadius="0" EdgeRadius="0" />
-		<Section ID="5" Name="HollowCircleProfile" Radius="0.0211" WallThickness="0.0033" />
-		<Section ID="6" Name="DoubleLShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.0063" Spacing="0" FilletRadius="0.0048" EdgeRadius="0" />
-		<Section ID="7" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.3125" Spacing="0" FilletRadius="0.234375" EdgeRadius="0" />
-		<Section ID="8" Name="LShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.0063" FilletRadius="0" EdgeRadius="0" />
-		<Section ID="9" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0063" Spacing="0" FilletRadius="0.0048" EdgeRadius="0" />
-		<Section ID="10" Name="HollowCircleProfile" Radius="0.0302" WallThickness="0.0036" />
-		<Section ID="11" Name="DoubleLShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.125" Spacing="0" FilletRadius="0.09375" EdgeRadius="0" />
-		<Section ID="12" Name="LShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.125" FilletRadius="0" EdgeRadius="0" />
-		<Section ID="13" Name="LShapeProfile" Width="0.0444" Depth="0.0444" Thickness="0.125" FilletRadius="0" EdgeRadius="0" />
-		<Section ID="14" Name="DoubleLShapeProfile" Width="0.0508" Depth="0.0508" Thickness="0.0048" Spacing="0" FilletRadius="0.140625" EdgeRadius="0" />
-		<Section ID="15" Name="HollowCircleProfile" Radius="0.0571" WallThickness="0.0056" />
-		<Section ID="16" Name="HollowCircleProfile" Radius="0.0302" WallThickness="0.0036" />
+		<Section ID="1" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
+		<Section ID="2" Name="LShapeProfile" Width="2" Depth="2" Thickness="0.1875" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="3" Name="HollowCircleProfile" Radius="2.25" WallThickness="0.221"/>
+		<Section ID="4" Name="LShapeProfile" Width="2.5" Depth="2.5" Thickness="0.375" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="5" Name="HollowCircleProfile" Radius="0.83" WallThickness="0.13"/>
+		<Section ID="6" Name="DoubleLShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="7" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.3125" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="8" Name="LShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="9" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="10" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
+		<Section ID="11" Name="DoubleLShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="12" Name="LShapeProfile" Width="2" Depth="2" Thickness="0.125" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="13" Name="LShapeProfile" Width="1.75" Depth="1.75" Thickness="0.125" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="14" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.1875" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="15" Name="HollowCircleProfile" Radius="2.25" WallThickness="0.221"/>
+		<Section ID="16" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
 	</Sections>
 	<ProjectData ID="1" Label="Project Data" HashId="40.7681610464-8.068940677" ComponentName="ProjectData" Carr_Subject="" Carr_sitename="" Carr_siteNumber="" Carr_AnalysisType="" Carr_CarrierName="" Cust_siteid="" Cust_JobNumber="" Cust_SiteName="" Cust_City="" Cust_State="" Cust_Zip="" Cust_Address="" Cust_ProjectID="" Cust_Applicationid="" Cust_ApplicationRevisionid="" Cust_Name="" Site_Address="" Site_City="" Site_State="" Site_Zip="" Site_County="" Site_Lattitude="40.7681264" Site_Longitude="-8.0689598" Site_Altitude="344.050324" />
 	<TowerInformation TowerID="xxxxx" ComponentName="TowerInformation" SourceAppElementId="xxxxx" Label="Tower Information" TowerName="xxxxxx" Description="xxxxxx" UnitSystem="English" Convention="True" BearingAngle="xxxxx" TowerType="Guyed" TowerHeight="200.0" TopFaceWidth="3.4167" TopFaceDepth="3.4167" BottomFaceWidth="0" BottomFaceDepth="0" NoofPanel="11" NoOfLegs="3"/>

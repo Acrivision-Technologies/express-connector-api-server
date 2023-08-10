@@ -18,7 +18,7 @@ export class Diamond1XBracingGeometry {
 
         const baseShape = this.createDgnShape(convertInchToMeter(section['Width']), length, convertInchToMeter(section['Thickness']));
         if (baseShape) {
-            baseShapePartID = this.insertGeometryPart(this._definitionModelId, name, baseShape);
+            baseShapePartID = this.insertGeometryPart(this._definitionModelId, name, baseShape)!;
         }
         return baseShapePartID;
     }
@@ -53,23 +53,28 @@ export class Diamond1XBracingGeometry {
     }
 
 
-    private insertGeometryPart = (definitionModelId: Id64String, name: string, primitive: SolidPrimitive): Id64String => {
-        const geometryStreamBuilder = new GeometryStreamBuilder();
-        const params = new GeometryParams(this._categoryId, "plan-t-shape");
-        params.fillColor = ColorDef.fromTbgr(CategoryColor.PlanBracing);
-        params.lineColor = params.fillColor;
-        geometryStreamBuilder.appendGeometryParamsChange(params);
-
-        geometryStreamBuilder.appendGeometry(primitive);
-
-        const geometryPartProps: GeometryPartProps = {
-            classFullName: GeometryPart.classFullName,
-            model: definitionModelId,
-            code: GeometryPart.createCode(this._imodel, definitionModelId, name),
-            geom: geometryStreamBuilder.geometryStream,
-        };
-
-
-        return this._imodel.elements.insertElement(geometryPartProps);
+    private insertGeometryPart = (definitionModelId: Id64String, name: string, primitive: SolidPrimitive): Id64String | undefined => {
+        try {
+            const geometryStreamBuilder = new GeometryStreamBuilder();
+            const params = new GeometryParams(this._categoryId, "plan-t-shape");
+            params.fillColor = ColorDef.fromTbgr(CategoryColor.PlanBracing);
+            params.lineColor = params.fillColor;
+            geometryStreamBuilder.appendGeometryParamsChange(params);
+    
+            geometryStreamBuilder.appendGeometry(primitive);
+    
+            const geometryPartProps: GeometryPartProps = {
+                classFullName: GeometryPart.classFullName,
+                model: definitionModelId,
+                code: GeometryPart.createCode(this._imodel, definitionModelId, name),
+                geom: geometryStreamBuilder.geometryStream,
+            };
+    
+    
+            return this._imodel.elements.insertElement(geometryPartProps);
+        } catch(e) {
+            console.log("Error while inserting the X bracing");
+            console.log(e)
+        }
     }
 }

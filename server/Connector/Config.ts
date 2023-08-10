@@ -11,7 +11,7 @@ export const Config = {
             "jobSubjectName": "OpenTower_JobSubject"
         },
         "hubArgs": {
-            "projectGuid": "c50bd02f-7cb3-44c5-8708-a295907b3e21",
+            "projectGuid": "0bb0b88d-86b6-4a33-a4d1-9fb14c09c127",
             "iModelGuid": "",
             "tokenCallbackUrl": "http://localhost:4001/connector/signin-callback",
             "region": 0,

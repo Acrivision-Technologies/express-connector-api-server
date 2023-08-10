@@ -168,13 +168,10 @@ export class TowerProjectDataElement extends PhysicalElement {
 
     protected static createTowerProjectDataElement(imodel: IModelDb, physicalModelId: Id64String, definitionModelId: Id64String, projectData: any, sourceEleID: any, categoryId: any, towerProjectDataBuilder: TowerProjectDataBuilder, classFullName: string, elementID: any): PhysicalElement | any {
         const code = this.createCode(imodel, physicalModelId, sourceEleID);
-        console.log('code')
-        console.log(code);
-        console.log('projectData')
-        console.log(projectData);
-        console.log(imodel);
-        console.log('imodel');
-        // console.log('imodel');
+        // console.log('code')
+        // console.log(code);
+        // console.log('projectData')
+        // console.log(projectData);
 
         const props: TowerProjectDataElementProps = {
             code,
@@ -213,11 +210,11 @@ export class TowerProjectDataElement extends PhysicalElement {
             Site_Longitude: projectData['Site_Longitude'],
             Site_Altitude: projectData['Site_Altitude'],
         };
-        console.log('props');
-        console.log(props);
+        // console.log('props');
+        // console.log(props);
         const insertedElement = imodel.elements.createElement(props);
-        console.log("insertedElement");
-        console.log(insertedElement);
+        // console.log("insertedElement");
+        // console.log(insertedElement);
 
 
 

@@ -134,25 +134,28 @@ export class ConnectorRunner {
    */
     public async run(connector: string, inputfileName: string, iModelName: string): Promise<any> {
         return new Promise(async (resolve: any, reject: any) => {
-            console.log("inside run");
-
             try {
                 this.runUnsafe(connector, inputfileName, iModelName)
                     .then(async (iModelGuid: string) => {
                         await this.onFinish();
                         resolve(iModelGuid);
-
                     })
                     .catch(async (error: any) => {
+                        // console.log("run unsafe promise catch case");
+                        // console.log(error)
                         const msg = error;
                         this.connector.reportError(this.jobArgs.stagingDir, msg, "ConnectorRunner", "Run", LoggerCategories.Framework);
                         await this.onFailure(error);
                         await this.onFinish();
+                        console.log(error)
+                        // console.log("error ====")
                         reject(error);
 
                     })
 
             } catch (err) {
+                // console.log("run unsafe catch case");
+                // console.log(err)
                 const msg = (err as any).message;
                 Logger.logError(LoggerCategories.Framework, msg);
                 Logger.logError(LoggerCategories.Framework, `Failed to execute connector module - ${connector}`);
@@ -220,19 +223,21 @@ export class ConnectorRunner {
     private async runUnsafe(connector: string, inputfileName: string, iModelName: string): Promise<any> {
 
         return new Promise(async (resolve: any, reject: any) => {
-            console.log("inside runUnsafe")
+            // console.log("inside runUnsafe")
             try {
                 let iModelGuid: string = "";
-
+                console.log(path.join(KnownLocations.assetsDir, "sampleFiles", inputfileName))
                 let getEcefLocationProps = this.getEcefLocationProps(path.join(KnownLocations.assetsDir, "sampleFiles", inputfileName))
+                // console.log("getEcefLocationProps");
+                // console.log(getEcefLocationProps)
 
-
+                // console.log(`connector: ${connector}`);
                 this._connector = await require(connector).default.createConnector("new");
-                console.log("_connector");
-                console.log(this._connector);
-                console.log("Creating iModel")
-                console.log('getEcefLocationProps');
-                console.log(getEcefLocationProps);
+                // console.log("_connector");
+                // console.log(this._connector);
+                // console.log("Creating iModel")
+                // console.log('getEcefLocationProps');
+                // console.log(getEcefLocationProps);
                 iModelGuid = await createNewConnectorIModel(this._hubArgs?.projectGuid, this._reqContext, iModelName, getEcefLocationProps);
                 this.hubArgs.iModelGuid = iModelGuid;
 
@@ -241,10 +246,8 @@ export class ConnectorRunner {
                     .then(async (briefcaseDb: ConnectorBriefcaseDb) => {
                         this._db = briefcaseDb;
 
-                        console.log('briefcaseDb');
-                        console.log(briefcaseDb);
-
-
+                        // console.log('briefcaseDb');
+                        // console.log(briefcaseDb);
                         
                         
                         Logger.logInfo(LoggerCategories.Framework, "Loading synchronizer...");
@@ -335,6 +338,8 @@ export class ConnectorRunner {
                         reject(error);
                     })
             } catch (e) {
+                // console.log("inside runUnsafe")
+                // console.log(e)
                 reject(e)
             }
 
@@ -925,19 +930,26 @@ export class ConnectorRunner {
 
     }
 
-    public getEcefLocationProps(sourcePath: string): EcefLocationProps | null {
-        const data = importSourceData(sourcePath);
-        console.log("Calling getEcefLocationProps");
-        if (data['ProjectData']) {
-            let projectData = data['ProjectData'];
-            const ecefLocationProps: EcefLocationProps = {
-                origin: { x:  projectData['Site_Lattitude']*1, y: projectData['Site_Longitude']*1, z: projectData['Site_Altitude']*1},
-                orientation: YawPitchRollAngles.createDegrees(0, 0, 0),
-                cartographicOrigin: { latitude:  projectData['Site_Lattitude']*1, longitude: projectData['Site_Longitude']*1, height: projectData['Site_Altitude']*1},
+    public getEcefLocationProps(sourcePath: string): EcefLocationProps | Error | null {
+        try {
+            // console.log("sourcePath: ", sourcePath)
+            // console.log(fs.existsSync(sourcePath))
+            const data = importSourceData(sourcePath);
+            // console.log("Calling getEcefLocationProps");
+            if (data['ProjectData']) {
+                let projectData = data['ProjectData'];
+                const ecefLocationProps: EcefLocationProps = {
+                    origin: { x:  projectData['Site_Lattitude']*1, y: projectData['Site_Longitude']*1, z: projectData['Site_Altitude']*1},
+                    orientation: YawPitchRollAngles.createDegrees(0, 0, 0),
+                    cartographicOrigin: { latitude:  projectData['Site_Lattitude']*1, longitude: projectData['Site_Longitude']*1, height: projectData['Site_Altitude']*1},
+                }
+                return ecefLocationProps;
+            } else {
+                return null;
             }
-            return ecefLocationProps;
-        } else {
-            return null;
+        } catch(e) {
+            // console.log("inside getEcefLocationProps")
+            throw e;
         }
     }
 

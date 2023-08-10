@@ -50,7 +50,7 @@ export class TowerProjectDataPhysicalElementService {
         if(results.id)
             elementID = results.id;
         element = TowerProjectDataElement.create(this.synchronizer.imodel, this.physicalModelId, this.definitionModelId, projectData, sourceEleID, elementID);
-        console.log(element);
+        // console.log(element);
         if(element) {
             if (undefined !== results.id) {
                 element.id = results.id;

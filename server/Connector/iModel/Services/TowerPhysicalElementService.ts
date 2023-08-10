@@ -98,6 +98,7 @@ export class TowerPhysicalElementService {
 
             for (const mountPipePropertyIndex of Object.keys(this.data['MountPipesProperties'])) {
 
+                const mountProperties = this.data['MountProperties']
                 const mountPipeProperty = this.data["MountPipesProperties"][mountPipePropertyIndex];
 
                 const definitaionModelId = queryDefinitionModel(this.synchronizer, this.jobSubject);
@@ -118,7 +119,7 @@ export class TowerPhysicalElementService {
                 });
 
                 if (pipes) {
-                    const towerMountPropertyPhysicalElement = new TowerMountPipePropertyPhysicalElementService(this.synchronizer, this.jobSubject, this.repositoryLinkId, definitaionModelId, physicalModelId, mountPipeProperty, nodes, this.data['Sections'])
+                    const towerMountPropertyPhysicalElement = new TowerMountPipePropertyPhysicalElementService(this.synchronizer, this.jobSubject, this.repositoryLinkId, definitaionModelId, physicalModelId, mountPipeProperty, nodes, this.data['Sections'], mountProperties)
                     towerMountPropertyPhysicalElement.processMountPipes(pipes)
                 }
 
@@ -146,12 +147,16 @@ export class TowerPhysicalElementService {
                 });
 
                 if (antennaElement.length > 0) {
-                    // let MountProperty: any = null;
-                    // if(this.data['MountProperties']) {
-                    //     MountProperty = this.data['MountProperties'].find((mountProperty: any) => {
-                    //         return mountProperty['ID'] === antennaElement[0]['elements'][0]['MountID'];
-                    //     });
-                    // }
+                    let Standoff = parseFloat('0')
+                    let MountProperty: any = null;
+                    if(this.data['MountProperties']) {
+                        MountProperty = this.data['MountProperties'].find((mountProperty: any) => {
+                            return mountProperty['ID'] === antennaElement[0]['elements'][0]['MountID'];
+                        });
+                    }
+                    if(MountProperty) {
+                        Standoff = parseFloat(MountProperty['Standoff'])
+                    }
 
                     // if (MountProperty) {
                     //     const Location = MountProperty['Location'];
@@ -160,24 +165,57 @@ export class TowerPhysicalElementService {
 
                     //     let legLocation = 0;
                     //     if (noOfLegs == 3) {
+                    //         // if (Location === 'LegA') {
+                    //         //     legLocation = 60;
+                    //         // } else if (Location === 'LegB') {
+                    //         //     legLocation = 180; // 45 + 90;
+                    //         // } else if (Location === 'LegC') {
+                    //         //     legLocation = 300; // 45 + 90 + 90;
+                    //         // }
                     //         if (Location === 'LegA') {
-                    //             legLocation = 60;
-
+                    //             legLocation = 0;
                     //         } else if (Location === 'LegB') {
-                    //             legLocation = 180; // 45 + 90;
+                    //             legLocation = 120; // 45 + 90;
                     //         } else if (Location === 'LegC') {
-                    //             legLocation = 300; // 45 + 90 + 90;
+                    //             legLocation = 240; // 45 + 90 + 90;
                     //         }
-                    //     } else {
-                    //         if (Location === 'LegA') {
-                    //             legLocation = 45;
+                    //         if (Location.includes('FaceA')) {
+                    //             legLocation = 300;
+                    //         } else if (Location.includes('FaceB')) {
+                    //             legLocation = 60; // 45 + 90;
+                    //         } else if (Location.includes('FaceC')) {
+                    //             legLocation = 180; // 45 + 90 + 90;
+                    //         }
 
+                    //     } else {
+                    //         // if (Location === 'LegA') {
+                    //         //     legLocation = 45;
+
+                    //         // } else if (Location === 'LegB') {
+                    //         //     legLocation = 135; // 45 + 90;
+                    //         // } else if (Location === 'LegC') {
+                    //         //     legLocation = 225; // 45 + 90 + 90;
+                    //         // } else if (Location === 'LegD') {
+                    //         //     legLocation = 315; // 45 + 90 + 90 + 90;
+                    //         // }
+
+                    //         if (Location === 'LegA') {
+                    //             legLocation = 0;
                     //         } else if (Location === 'LegB') {
-                    //             legLocation = 135; // 45 + 90;
+                    //             legLocation = 90; // 45 + 90;
                     //         } else if (Location === 'LegC') {
-                    //             legLocation = 225; // 45 + 90 + 90;
+                    //             legLocation = 180; // 45 + 90 + 90;
                     //         } else if (Location === 'LegD') {
-                    //             legLocation = 315; // 45 + 90 + 90 + 90;
+                    //             legLocation = 270; // 45 + 90 + 90;
+                    //         }
+                    //         if (Location.includes('FaceA')) {
+                    //             legLocation = 315;
+                    //         } else if (Location.includes('FaceB')) {
+                    //             legLocation = 45; // 45 + 90;
+                    //         } else if (Location.includes('FaceC')) {
+                    //             legLocation = 135; // 45 + 90 + 90;
+                    //         } else if (Location.includes('FaceD')) {
+                    //             legLocation = 225; // 45 + 90 + 90;
                     //         }
                     //     }
 
@@ -188,11 +226,12 @@ export class TowerPhysicalElementService {
                     // } else {
                     //     antennaProperty['AntennaAzmith'] = antennaProperty['Azimuth'];
                     // }
-                    antennaProperty['AntennaAzmith'] = 0;
-                    antennaProperty['Azimuth'] = 0;
+                    antennaProperty['Azimuth'] = antennaProperty['Azimuth'] * 1; 
+                    antennaProperty['AntennaAzmith'] = antennaProperty['Azimuth'] * 1;
+                    antennaProperty['Standoff'] = Standoff;
 
-                    console.log("antennaProperty");
-                    console.log(JSON.stringify(antennaProperty));
+                    // console.log("antennaProperty");
+                    // console.log(JSON.stringify(antennaProperty));
 
 
                     if (antennaElement) {

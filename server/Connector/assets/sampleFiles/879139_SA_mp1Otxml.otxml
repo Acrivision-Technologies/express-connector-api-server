@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Staad>
+	<Sections>
+		<Section ID="1" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
+		<Section ID="2" Name="LShapeProfile" Width="2" Depth="2" Thickness="0.1875" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="3" Name="HollowCircleProfile" Radius="2.25" WallThickness="0.221"/>
+		<Section ID="4" Name="LShapeProfile" Width="2.5" Depth="2.5" Thickness="0.375" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="5" Name="HollowCircleProfile" Radius="0.83" WallThickness="0.13"/>
+		<Section ID="6" Name="DoubleLShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="7" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.3125" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="8" Name="LShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="9" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="10" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
+		<Section ID="11" Name="DoubleLShapeProfile" Width="1.75" Depth="1.75" Thickness="0.25" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="12" Name="LShapeProfile" Width="2" Depth="2" Thickness="0.125" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="13" Name="LShapeProfile" Width="1.75" Depth="1.75" Thickness="0.125" FilletRadius="0" EdgeRadius="0"/>
+		<Section ID="14" Name="DoubleLShapeProfile" Width="2" Depth="2" Thickness="0.1875" FilletRadius="0" EdgeRadius="0" Spacing="0"/>
+		<Section ID="15" Name="HollowCircleProfile" Radius="2.25" WallThickness="0.221"/>
+		<Section ID="16" Name="HollowCircleProfile" Radius="1.1875" WallThickness="0.143"/>
+	</Sections>
+	<ProjectData ID="1" Label="Project Data" HashId="40.7681610464-8.068940677" ComponentName="ProjectData" Carr_Subject="" Carr_sitename="" Carr_siteNumber="" Carr_AnalysisType="" Carr_CarrierName="" Cust_siteid="" Cust_JobNumber="" Cust_SiteName="" Cust_City="" Cust_State="" Cust_Zip="" Cust_Address="" Cust_ProjectID="" Cust_Applicationid="" Cust_ApplicationRevisionid="" Cust_Name="" Site_Address="" Site_City="" Site_State="" Site_Zip="" Site_County="" Site_Lattitude="41.3" Site_Longitude="95.86" Site_Altitude="99"/>
+	<TowerInformation TowerID="xxxxx" ComponentName="TowerInformation" SourceAppElementId="xxxxx" Label="Tower Information" TowerName="xxxxxx" Description="xxxxxx" UnitSystem="English" Convention="True" BearingAngle="xxxxx" TowerType="Monopole" TowerHeight="30.1752" TopFaceWidth="N/A" TopFaceDepth="N/A" BottomFaceWidth="N/A" BottomFaceDepth="N/A" NoofPanel="2" NoOfLegs="3"/>
+	<Nodes>
+		<Node ID="1" X="0" Y="30.1752" Z="0"/>
+		<Node ID="2" X="0" Y="14.606016000000002" Z="0"/>
+		<Node ID="3" X="0" Y="0.0" Z="0"/>
+	</Nodes>
+	<PoleProperties>
+		<PoleProperty PoleID="1" Label="Pole 1" SectionLength="51.08" TopElevation="99.0" BottomElevation="47.92" TopFlatDiameter="0.4521197558553319" BottomFlatDiameter="0.7637775875601027" TopTipDiameter="0.45923175201485394" BottomTipDiameter="0.7708895837196248" Thickness="0.007111996159522074" PolesectionType="Tapered" TopFlatWidth="" BottomFlatWidth="" ComponentName="Pole"/>
+		<PoleProperty PoleID="2" Label="Pole 2" SectionLength="47.92" TopElevation="47.92" BottomElevation="0.0" TopFlatDiameter="0.7216136103286505" BottomFlatDiameter="1.0413994376443036" TopTipDiameter="0.7312656051165732" BottomTipDiameter="1.0510514324322264" Thickness="0.009651994787922814" PolesectionType="Tapered" TopFlatWidth="" BottomFlatWidth="" ComponentName="Pole"/>
+	</PoleProperties>
+	<Pole ID="1">
+		<PhysicalMember PolePropertyID="1" ID="1" StartNodeID="1" EndNodeID="2" SectionID="1" BetaAngle="-90" Label="Leg_C" HashId="1_-90_Leg_C"/>
+	</Pole>
+	<Pole ID="2">
+		<PhysicalMember PolePropertyID="2" ID="2" StartNodeID="2" EndNodeID="3" SectionID="1" BetaAngle="-90" Label="Leg_C" HashId="2_-90_Leg_C"/>
+	</Pole>
+	<AttachmentProperties>
+		<AttachmentProperty ID="1" Label="Safety Line 3/8" TopElevation="99.0" BottomElevation="0.0" AttachmentName="Safety Line 3/8" AttachmentType="Continuous" Location="A" Azimuth="0" Width="0.38" Depth="xxxxxxxxxxxx" Weight="0.22" Classification="Existing" ComponentName="Attachment" SourceAppElementId="Attachment_1_Continuous" Manufacturer="miscl" Model="3/8 Safety Cable"/>
+	</AttachmentProperties>
+	<Attachments>
+		<Attachment ID="1">
+			<AttachmentMember ID="1" AttachmentPropertyID="1" RefId="xxxxxxxx" SectionId="5" StartNodeID="1" EndNodeID="2" Label="Attachment" SourceAppElementId="xxxxxxxxxxxxxxxxx"/>
+			<AttachmentMember ID="2" AttachmentPropertyID="1" RefId="xxxxxxxx" SectionId="5" StartNodeID="2" EndNodeID="3" Label="Attachment" SourceAppElementId="xxxxxxxxxxxxxxxxx"/>
+		</Attachment>
+	</Attachments>
+	<AttachmentNodes>
+		<AttachmentNode ID="1" X="-0.2" Y="30.18" Z="0.12"/>
+		<AttachmentNode ID="2" X="-0.32" Y="14.61" Z="0.19"/>
+		<AttachmentNode ID="3" X="-0.46" Y="0.0" Z="0.26"/>
+	</AttachmentNodes>
+	<MountProperties>
+		<MountProperty ID="1" Label="TA 602-1" Name="TA 602-1" Elevation="97.0" Manufacturer="MOUNTS" ModelName="TA 602-1" Type="TARM" Location="LegA" Azimuth="0.0000" Height="0.0" Width="12.0" Standoff="4.0" Weight="258.1" Classification="Existing" ComponentName="Mount" SourceAppElementId="Attachment_1"/>
+		<MountProperty ID="2" Label="TA 602-1" Name="TA 602-1" Elevation="97.0" Manufacturer="MOUNTS" ModelName="TA 602-1" Type="TARM" Location="LegB" Azimuth="0.0000" Height="0.0" Width="12.0" Standoff="4.0" Weight="258.1" Classification="Existing" ComponentName="Mount" SourceAppElementId="Attachment_2"/>
+		<MountProperty ID="3" Label="TA 602-1" Name="TA 602-1" Elevation="97.0" Manufacturer="MOUNTS" ModelName="TA 602-1" Type="TARM" Location="LegC" Azimuth="0.0000" Height="0.0" Width="12.0" Standoff="4.0" Weight="258.1" Classification="Existing" ComponentName="Mount" SourceAppElementId="Attachment_3"/>
+		<MountProperty ID="4" Label="LP 602-1" Name="LP 602-1" Elevation="82.0" Manufacturer="MOUNTS" ModelName="LP 602-1" Type="FRAMEDPLTF3" Location="LegA" Azimuth="0.0000" Height="4.0" Width="12.0" Standoff="0.0" Weight="1343.3" Classification="Existing" ComponentName="Mount" SourceAppElementId="Attachment_4"/>
+	</MountProperties>
+	<MountNodes>
+		<MountNode ID="1" X="-0.2" Y="29.57" Z="0.12"/>
+		<MountNode ID="2" X="-1.26" Y="29.57" Z="0.73"/>
+		<MountNode ID="3" X="-0.3478341661700072" Y="29.57" Z="2.3150750555078563"/>
+		<MountNode ID="4" X="-2.1721658338299927" Y="29.57" Z="-0.8550750555078566"/>
+		<MountNode ID="5" X="0.0" Y="29.57" Z="-0.24"/>
+		<MountNode ID="6" X="0.0" Y="29.57" Z="-1.45"/>
+		<MountNode ID="7" X="-1.8288000000000002" Y="29.57" Z="-1.45"/>
+		<MountNode ID="8" X="1.8288000000000002" Y="29.57" Z="-1.45"/>
+		<MountNode ID="9" X="0.2" Y="29.57" Z="0.12"/>
+		<MountNode ID="10" X="1.26" Y="29.57" Z="0.73"/>
+		<MountNode ID="11" X="2.1721658338299927" Y="29.57" Z="-0.8550750555078566"/>
+		<MountNode ID="12" X="0.3478341661700072" Y="29.57" Z="2.3150750555078563"/>
+		<MountNode ID="13" X="-1.83" Y="25.6" Z="1.06"/>
+		<MountNode ID="14" X="-1.83" Y="24.38" Z="1.06"/>
+		<MountNode ID="15" X="0.0" Y="25.6" Z="-2.11"/>
+		<MountNode ID="16" X="0.0" Y="24.38" Z="-2.11"/>
+		<MountNode ID="17" X="0.0" Y="24.38" Z="-0.29"/>
+		<MountNode ID="18" X="1.83" Y="25.6" Z="1.06"/>
+		<MountNode ID="19" X="1.83" Y="24.38" Z="1.06"/>
+		<MountNode ID="20" X="0.25" Y="24.38" Z="0.14"/>
+		<MountNode ID="21" X="-0.25" Y="24.38" Z="0.14"/>
+	</MountNodes>
+	<Mounts>
+		<Mount ID="1">
+			<MountMember ID="1" RefID="1" StartNodeID="2" EndNodeID="1" SectionID="2" Label="Mount" MountPropertyID="1" SourceAppElementId="Mount_1_TArm_1"/>
+			<MountMember ID="2" RefID="1" StartNodeID="3" EndNodeID="4" SectionID="2" Label="Mount" MountPropertyID="1" SourceAppElementId="Mount_1_TArm_2"/>
+		</Mount>
+		<Mount ID="2">
+			<MountMember ID="1" RefID="2" StartNodeID="6" EndNodeID="5" SectionID="2" Label="Mount" MountPropertyID="2" SourceAppElementId="Mount_2_TArm_1"/>
+			<MountMember ID="2" RefID="2" StartNodeID="7" EndNodeID="8" SectionID="2" Label="Mount" MountPropertyID="2" SourceAppElementId="Mount_2_TArm_2"/>
+		</Mount>
+		<Mount ID="3">
+			<MountMember ID="1" RefID="3" StartNodeID="10" EndNodeID="9" SectionID="2" Label="Mount" MountPropertyID="3" SourceAppElementId="Mount_3_TArm_1"/>
+			<MountMember ID="2" RefID="3" StartNodeID="11" EndNodeID="12" SectionID="2" Label="Mount" MountPropertyID="3" SourceAppElementId="Mount_3_TArm_2"/>
+		</Mount>
+		<Mount ID="4">
+			<MountMember ID="1" RefID="4" StartNodeID="13" EndNodeID="14" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_1"/>
+			<MountMember ID="2" RefID="4" StartNodeID="15" EndNodeID="16" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_2"/>
+			<MountMember ID="3" RefID="4" StartNodeID="13" EndNodeID="15" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_3"/>
+			<MountMember ID="4" RefID="4" StartNodeID="14" EndNodeID="16" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_4"/>
+			<MountMember ID="5" RefID="4" StartNodeID="16" EndNodeID="17" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_5"/>
+			<MountMember ID="6" RefID="4" StartNodeID="18" EndNodeID="19" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_6"/>
+			<MountMember ID="7" RefID="4" StartNodeID="15" EndNodeID="18" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_7"/>
+			<MountMember ID="8" RefID="4" StartNodeID="16" EndNodeID="19" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_8"/>
+			<MountMember ID="9" RefID="4" StartNodeID="19" EndNodeID="20" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_9"/>
+			<MountMember ID="10" RefID="4" StartNodeID="18" EndNodeID="13" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_10"/>
+			<MountMember ID="11" RefID="4" StartNodeID="19" EndNodeID="14" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_11"/>
+			<MountMember ID="12" RefID="4" StartNodeID="14" EndNodeID="21" SectionID="2" Label="Mount" MountPropertyID="4" SourceAppElementId="Mount_4_SectorFrame_12"/>
+		</Mount>
+	</Mounts>
+	<AntennaProperties>
+		<AntennaProperty ID="1" Label="ET-X-TS-70-15-62-18-IR-RD" Name="ET-X-TS-70-15-62-18-IR-RD" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-TS-70-15-62-18-IR-RD" Location="LegA" Type="PANEL" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="73.8" Width="11.8" Depth="5.9" Weight="41.9" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_1"/>
+		<AntennaProperty ID="2" Label="ET-X-TS-70-15-62-18-IR-RD" Name="ET-X-TS-70-15-62-18-IR-RD" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-TS-70-15-62-18-IR-RD" Location="LegB" Type="PANEL" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="73.8" Width="11.8" Depth="5.9" Weight="41.9" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_2"/>
+		<AntennaProperty ID="3" Label="ET-X-TS-70-15-62-18-IR-RD" Name="ET-X-TS-70-15-62-18-IR-RD" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-TS-70-15-62-18-IR-RD" Location="LegC" Type="PANEL" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="73.8" Width="11.8" Depth="5.9" Weight="41.9" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_3"/>
+		<AntennaProperty ID="4" Label="RRH-C2A W/EXT FILTER" Name="RRH-C2A W/EXT FILTER" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-C2A W/EXT FILTER" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.7" Width="6.73" Depth="15.75" Weight="55.1" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_4"/>
+		<AntennaProperty ID="5" Label="RRH-C2A W/EXT FILTER" Name="RRH-C2A W/EXT FILTER" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-C2A W/EXT FILTER" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.7" Width="6.73" Depth="15.75" Weight="55.1" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_5"/>
+		<AntennaProperty ID="6" Label="RRH-C2A W/EXT FILTER" Name="RRH-C2A W/EXT FILTER" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-C2A W/EXT FILTER" Location="LegC" Type="TME" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.7" Width="6.73" Depth="15.75" Weight="55.1" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_6"/>
+		<AntennaProperty ID="7" Label="RRH-P4" Name="RRH-P4" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-P4" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.81" Width="13.78" Depth="8.96" Weight="59.52" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_7"/>
+		<AntennaProperty ID="8" Label="RRH-P4" Name="RRH-P4" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-P4" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.81" Width="13.78" Depth="8.96" Weight="59.52" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_8"/>
+		<AntennaProperty ID="9" Label="RRH-P4" Name="RRH-P4" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="RRH-P4" Location="LegC" Type="TME" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="23.81" Width="13.78" Depth="8.96" Weight="59.52" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_9"/>
+		<AntennaProperty ID="10" Label="ET-X-WM-18-65-8P" Name="ET-X-WM-18-65-8P" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-WM-18-65-8P" Location="LegA" Type="PANEL" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="61.0" Width="12.0" Depth="4.3" Weight="36.4" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_10"/>
+		<AntennaProperty ID="11" Label="ET-X-WM-18-65-8P" Name="ET-X-WM-18-65-8P" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-WM-18-65-8P" Location="LegB" Type="PANEL" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="61.0" Width="12.0" Depth="4.3" Weight="36.4" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_11"/>
+		<AntennaProperty ID="12" Label="ET-X-WM-18-65-8P" Name="ET-X-WM-18-65-8P" Elevation="97.0" Manufacturer="KMW COMMUNICATIONS" ModelName="ET-X-WM-18-65-8P" Location="LegC" Type="PANEL" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="61.0" Width="12.0" Depth="4.3" Weight="36.4" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_12"/>
+		<AntennaProperty ID="13" Label="2.5GHZ RRH-V3" Name="2.5GHZ RRH-V3" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="2.5GHZ RRH-V3" Location="LegA" Type="TME" Azimuth="300" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="15.5" Width="18.6" Depth="9.45" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_13"/>
+		<AntennaProperty ID="14" Label="2.5GHZ RRH-V3" Name="2.5GHZ RRH-V3" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="2.5GHZ RRH-V3" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="15.5" Width="18.6" Depth="9.45" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_14"/>
+		<AntennaProperty ID="15" Label="2.5GHZ RRH-V3" Name="2.5GHZ RRH-V3" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="2.5GHZ RRH-V3" Location="LegC" Type="TME" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="15.5" Width="18.6" Depth="9.45" Weight="60.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_15"/>
+		<AntennaProperty ID="16" Label="HORIZON COMPACT PLUS" Name="HORIZON COMPACT PLUS" Elevation="97.0" Manufacturer="DRAGONWAVE" ModelName="HORIZON COMPACT PLUS" Location="LegB" Type="TME" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="9.6" Width="8.7" Depth="4.0" Weight="7.5" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_16"/>
+		<AntennaProperty ID="17" Label="2.5G 8T8R RADAR FILTER" Name="2.5G 8T8R RADAR FILTER" Elevation="97.0" Manufacturer="SAMSUNG TELECOMMUNICATIONS" ModelName="2.5G 8T8R RADAR FILTER" Location="LegC" Type="TME" Azimuth="60" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="12.09" Width="8.0" Depth="3.03" Weight="22.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_17"/>
+		<AntennaProperty ID="18" Label="VHLP1-23" Name="VHLP1-23" Elevation="97.0" Manufacturer="ANDREW" ModelName="VHLP1-23" Location="LegB" Type="DISH" Azimuth="180" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="15.3" Width="15.3" Depth="8.7" Weight="14.21" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_18"/>
+		<AntennaProperty ID="19" Label="FV65-17-00DP" Name="FV65-17-00DP" Elevation="82.0" Manufacturer="EMS WIRELESS" ModelName="FV65-17-00DP" Location="LegA" Type="PANEL" Azimuth="240" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="56.0" Width="8.0" Depth="2.75" Weight="18.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_19"/>
+		<AntennaProperty ID="20" Label="RV45-19-04DPL4" Name="RV45-19-04DPL4" Elevation="82.0" Manufacturer="EMS WIRELESS" ModelName="RV45-19-04DPL4" Location="LegC" Type="PANEL" Azimuth="0" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="48.0" Width="12.0" Depth="4.0" Weight="23.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_20"/>
+		<AntennaProperty ID="21" Label="FV65-17-04DP" Name="FV65-17-04DP" Elevation="82.0" Manufacturer="EMS WIRELESS" ModelName="FV65-17-04DP" Location="LegB" Type="PANEL" Azimuth="120" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="56.0" Width="8.0" Depth="2.75" Weight="18.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_21"/>
+		<AntennaProperty ID="22" Label="KASCTPR82008" Name="KASCTPR82008" Elevation="82.0" Manufacturer="KMW COMMUNICATIONS" ModelName="KASCTPR82008" Location="LegA" Type="TME" Azimuth="240" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="3.54" Width="2.83" Depth="1.66" Weight="1.32" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_22"/>
+		<AntennaProperty ID="23" Label="P65E-17-XL-R" Name="P65E-17-XL-R" Elevation="82.0" Manufacturer="POWERWAVE TECHNOLOGIES" ModelName="P65E-17-XL-R" Location="LegA" Type="PANEL" Azimuth="240" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="96.0" Width="12.0" Depth="10.0" Weight="44.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_23"/>
+		<AntennaProperty ID="24" Label="KASCTPR82008" Name="KASCTPR82008" Elevation="82.0" Manufacturer="KMW COMMUNICATIONS" ModelName="KASCTPR82008" Location="LegB" Type="TME" Azimuth="120" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="3.54" Width="2.83" Depth="1.66" Weight="1.32" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_24"/>
+		<AntennaProperty ID="25" Label="P65E-17-XL-R" Name="P65E-17-XL-R" Elevation="82.0" Manufacturer="POWERWAVE TECHNOLOGIES" ModelName="P65E-17-XL-R" Location="LegB" Type="PANEL" Azimuth="120" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="96.0" Width="12.0" Depth="10.0" Weight="44.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_25"/>
+		<AntennaProperty ID="26" Label="KASCTPR82008" Name="KASCTPR82008" Elevation="82.0" Manufacturer="KMW COMMUNICATIONS" ModelName="KASCTPR82008" Location="LegC" Type="TME" Azimuth="0" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="3.54" Width="2.83" Depth="1.66" Weight="1.32" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_26"/>
+		<AntennaProperty ID="27" Label="P65E-17-XL-R" Name="P65E-17-XL-R" Elevation="82.0" Manufacturer="POWERWAVE TECHNOLOGIES" ModelName="P65E-17-XL-R" Location="LegC" Type="PANEL" Azimuth="0" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="96.0" Width="12.0" Depth="10.0" Weight="44.0" Classification="Existing" ComponentName="Antenna" SourceAppElementId="Attachment_27"/>
+	</AntennaProperties>
+	<AntennaNodes>
+		<AntennaNode ID="1" X="-1.4914319655698103" Y="28.632740000000002" Z="0.863182546224136"/>
+		<AntennaNode ID="2" X="-1.4914319655698103" Y="30.50726" Z="0.863182546224136"/>
+		<AntennaNode ID="3" X="0.0" Y="28.632740000000002" Z="-1.7170174999999999"/>
+		<AntennaNode ID="4" X="0.0" Y="30.50726" Z="-1.7170174999999999"/>
+		<AntennaNode ID="5" X="1.4914319655698103" Y="28.632740000000002" Z="0.863182546224136"/>
+		<AntennaNode ID="6" X="1.4914319655698103" Y="30.50726" Z="0.863182546224136"/>
+		<AntennaNode ID="7" X="-1.599855502352813" Y="29.26901" Z="0.9255772230520904"/>
+		<AntennaNode ID="8" X="-1.599855502352813" Y="29.87099" Z="0.9255772230520904"/>
+		<AntennaNode ID="9" X="0.0" Y="29.26901" Z="-1.8421124999999998"/>
+		<AntennaNode ID="10" X="0.0" Y="29.87099" Z="-1.8421124999999998"/>
+		<AntennaNode ID="11" X="1.599855502352813" Y="29.26901" Z="0.9255772230520904"/>
+		<AntennaNode ID="12" X="1.599855502352813" Y="29.87099" Z="0.9255772230520904"/>
+		<AntennaNode ID="13" X="-1.5251148104993524" Y="29.267613" Z="0.8825660701930234"/>
+		<AntennaNode ID="14" X="-1.5251148104993524" Y="29.872387" Z="0.8825660701930234"/>
+		<AntennaNode ID="15" X="0.0" Y="29.267613" Z="-1.7558794999999998"/>
+		<AntennaNode ID="16" X="0.0" Y="29.872387" Z="-1.7558794999999998"/>
+		<AntennaNode ID="17" X="1.5251148104993524" Y="29.267613" Z="0.8825660701930234"/>
+		<AntennaNode ID="18" X="1.5251148104993524" Y="29.872387" Z="0.8825660701930234"/>
+		<AntennaNode ID="19" X="-1.4738200205086118" Y="28.7953" Z="0.8530473702926917"/>
+		<AntennaNode ID="20" X="-1.4738200205086118" Y="30.3447" Z="0.8530473702926917"/>
+		<AntennaNode ID="21" X="0.0" Y="28.7953" Z="-1.6966975"/>
+		<AntennaNode ID="22" X="0.0" Y="30.3447" Z="-1.6966975"/>
+		<AntennaNode ID="23" X="1.4738200205086118" Y="28.7953" Z="0.8530473702926917"/>
+		<AntennaNode ID="24" X="1.4738200205086118" Y="30.3447" Z="0.8530473702926917"/>
+		<AntennaNode ID="25" X="-1.5305084686743442" Y="29.37315" Z="0.8856699678220282"/>
+		<AntennaNode ID="26" X="-1.5305084686743442" Y="29.76685" Z="0.8856699678220282"/>
+		<AntennaNode ID="27" X="0.0" Y="29.37315" Z="-1.7621025"/>
+		<AntennaNode ID="28" X="0.0" Y="29.76685" Z="-1.7621025"/>
+		<AntennaNode ID="29" X="1.5305084686743442" Y="29.37315" Z="0.8856699678220282"/>
+		<AntennaNode ID="30" X="1.5305084686743442" Y="29.76685" Z="0.8856699678220282"/>
+		<AntennaNode ID="31" X="0.0" Y="29.44808" Z="-1.6928874999999999"/>
+		<AntennaNode ID="32" X="0.0" Y="29.69192" Z="-1.6928874999999999"/>
+		<AntennaNode ID="33" X="1.4598405391162856" Y="29.416457" Z="0.8450025743971077"/>
+		<AntennaNode ID="34" X="1.4598405391162856" Y="29.723543" Z="0.8450025743971077"/>
+		<AntennaNode ID="35" X="0.0" Y="29.37569" Z="-1.7525775"/>
+		<AntennaNode ID="36" X="0.0" Y="29.764310000000002" Z="-1.7525775"/>
+		<AntennaNode ID="37" X="-1.1116039723498106" Y="24.2788" Z="-0.638496930410143"/>
+		<AntennaNode ID="38" X="-1.1116039723498106" Y="25.701200000000004" Z="-0.638496930410143"/>
+		<AntennaNode ID="39" X="0.0" Y="24.3804" Z="1.3028875"/>
+		<AntennaNode ID="40" X="0.0" Y="25.599600000000002" Z="1.3028875"/>
+		<AntennaNode ID="41" X="1.1116039723498106" Y="24.2788" Z="-0.638496930410143"/>
+		<AntennaNode ID="42" X="1.1116039723498106" Y="25.701200000000004" Z="-0.638496930410143"/>
+		<AntennaNode ID="43" X="-1.0996152545953326" Y="24.945042" Z="-0.6315759987096083"/>
+		<AntennaNode ID="44" X="-1.0996152545953326" Y="25.034958000000003" Z="-0.6315759987096083"/>
+		<AntennaNode ID="45" X="-1.191345443652531" Y="23.7708" Z="-0.6845306504366346"/>
+		<AntennaNode ID="46" X="-1.191345443652531" Y="26.209200000000003" Z="-0.6845306504366346"/>
+		<AntennaNode ID="47" X="1.0996152545953326" Y="24.945042" Z="-0.6315759987096083"/>
+		<AntennaNode ID="48" X="1.0996152545953326" Y="25.034958000000003" Z="-0.6315759987096083"/>
+		<AntennaNode ID="49" X="1.191345443652531" Y="23.7708" Z="-0.6845306504366346"/>
+		<AntennaNode ID="50" X="1.191345443652531" Y="26.209200000000003" Z="-0.6845306504366346"/>
+		<AntennaNode ID="51" X="0.0" Y="24.945042" Z="1.2731695"/>
+		<AntennaNode ID="52" X="0.0" Y="25.034958000000003" Z="1.2731695"/>
+		<AntennaNode ID="53" X="0.0" Y="23.7708" Z="1.3790875"/>
+		<AntennaNode ID="54" X="0.0" Y="26.209200000000003" Z="1.3790875"/>
+	</AntennaNodes>
+	<Antennas>
+		<Antenna ID="1">
+			<AntennaMember ID="1" RefID="1" StartNodeID="1" EndNodeID="2" SectionID="3" AntennaPropertyID="1" Label="Antenna" MountID="1" SourceAppElementId="Antenna_1_PANEL"/>
+		</Antenna>
+		<Antenna ID="2">
+			<AntennaMember ID="2" RefID="2" StartNodeID="3" EndNodeID="4" SectionID="3" AntennaPropertyID="2" Label="Antenna" MountID="2" SourceAppElementId="Antenna_2_PANEL"/>
+		</Antenna>
+		<Antenna ID="3">
+			<AntennaMember ID="3" RefID="3" StartNodeID="5" EndNodeID="6" SectionID="3" AntennaPropertyID="3" Label="Antenna" MountID="3" SourceAppElementId="Antenna_3_PANEL"/>
+		</Antenna>
+		<Antenna ID="4">
+			<AntennaMember ID="4" RefID="4" StartNodeID="7" EndNodeID="8" SectionID="3" AntennaPropertyID="4" Label="Antenna" MountID="1" SourceAppElementId="Antenna_4_TME"/>
+		</Antenna>
+		<Antenna ID="5">
+			<AntennaMember ID="5" RefID="5" StartNodeID="9" EndNodeID="10" SectionID="3" AntennaPropertyID="5" Label="Antenna" MountID="2" SourceAppElementId="Antenna_5_TME"/>
+		</Antenna>
+		<Antenna ID="6">
+			<AntennaMember ID="6" RefID="6" StartNodeID="11" EndNodeID="12" SectionID="3" AntennaPropertyID="6" Label="Antenna" MountID="3" SourceAppElementId="Antenna_6_TME"/>
+		</Antenna>
+		<Antenna ID="7">
+			<AntennaMember ID="7" RefID="7" StartNodeID="13" EndNodeID="14" SectionID="3" AntennaPropertyID="7" Label="Antenna" MountID="1" SourceAppElementId="Antenna_7_TME"/>
+		</Antenna>
+		<Antenna ID="8">
+			<AntennaMember ID="8" RefID="8" StartNodeID="15" EndNodeID="16" SectionID="3" AntennaPropertyID="8" Label="Antenna" MountID="2" SourceAppElementId="Antenna_8_TME"/>
+		</Antenna>
+		<Antenna ID="9">
+			<AntennaMember ID="9" RefID="9" StartNodeID="17" EndNodeID="18" SectionID="3" AntennaPropertyID="9" Label="Antenna" MountID="3" SourceAppElementId="Antenna_9_TME"/>
+		</Antenna>
+		<Antenna ID="10">
+			<AntennaMember ID="10" RefID="10" StartNodeID="19" EndNodeID="20" SectionID="3" AntennaPropertyID="10" Label="Antenna" MountID="1" SourceAppElementId="Antenna_10_PANEL"/>
+		</Antenna>
+		<Antenna ID="11">
+			<AntennaMember ID="11" RefID="11" StartNodeID="21" EndNodeID="22" SectionID="3" AntennaPropertyID="11" Label="Antenna" MountID="2" SourceAppElementId="Antenna_11_PANEL"/>
+		</Antenna>
+		<Antenna ID="12">
+			<AntennaMember ID="12" RefID="12" StartNodeID="23" EndNodeID="24" SectionID="3" AntennaPropertyID="12" Label="Antenna" MountID="3" SourceAppElementId="Antenna_12_PANEL"/>
+		</Antenna>
+		<Antenna ID="13">
+			<AntennaMember ID="13" RefID="13" StartNodeID="25" EndNodeID="26" SectionID="3" AntennaPropertyID="13" Label="Antenna" MountID="1" SourceAppElementId="Antenna_13_TME"/>
+		</Antenna>
+		<Antenna ID="14">
+			<AntennaMember ID="14" RefID="14" StartNodeID="27" EndNodeID="28" SectionID="3" AntennaPropertyID="14" Label="Antenna" MountID="2" SourceAppElementId="Antenna_14_TME"/>
+		</Antenna>
+		<Antenna ID="15">
+			<AntennaMember ID="15" RefID="15" StartNodeID="29" EndNodeID="30" SectionID="3" AntennaPropertyID="15" Label="Antenna" MountID="3" SourceAppElementId="Antenna_15_TME"/>
+		</Antenna>
+		<Antenna ID="16">
+			<AntennaMember ID="16" RefID="16" StartNodeID="31" EndNodeID="32" SectionID="3" AntennaPropertyID="16" Label="Antenna" MountID="2" SourceAppElementId="Antenna_16_TME"/>
+		</Antenna>
+		<Antenna ID="17">
+			<AntennaMember ID="17" RefID="17" StartNodeID="33" EndNodeID="34" SectionID="3" AntennaPropertyID="17" Label="Antenna" MountID="3" SourceAppElementId="Antenna_17_TME"/>
+		</Antenna>
+		<Antenna ID="18">
+			<AntennaMember ID="18" RefID="18" StartNodeID="35" EndNodeID="36" SectionID="3" AntennaPropertyID="18" Label="Antenna" MountID="2" SourceAppElementId="Antenna_18_DISH"/>
+		</Antenna>
+		<Antenna ID="19">
+			<AntennaMember ID="19" RefID="19" StartNodeID="37" EndNodeID="38" SectionID="3" AntennaPropertyID="19" Label="Antenna" MountID="4" SourceAppElementId="Antenna_19_PANEL"/>
+		</Antenna>
+		<Antenna ID="20">
+			<AntennaMember ID="20" RefID="20" StartNodeID="39" EndNodeID="40" SectionID="3" AntennaPropertyID="20" Label="Antenna" MountID="4" SourceAppElementId="Antenna_20_PANEL"/>
+		</Antenna>
+		<Antenna ID="21">
+			<AntennaMember ID="21" RefID="21" StartNodeID="41" EndNodeID="42" SectionID="3" AntennaPropertyID="21" Label="Antenna" MountID="4" SourceAppElementId="Antenna_21_PANEL"/>
+		</Antenna>
+		<Antenna ID="22">
+			<AntennaMember ID="22" RefID="22" StartNodeID="43" EndNodeID="44" SectionID="3" AntennaPropertyID="22" Label="Antenna" MountID="4" SourceAppElementId="Antenna_22_TME"/>
+		</Antenna>
+		<Antenna ID="23">
+			<AntennaMember ID="23" RefID="23" StartNodeID="45" EndNodeID="46" SectionID="3" AntennaPropertyID="23" Label="Antenna" MountID="4" SourceAppElementId="Antenna_23_PANEL"/>
+		</Antenna>
+		<Antenna ID="24">
+			<AntennaMember ID="24" RefID="24" StartNodeID="47" EndNodeID="48" SectionID="3" AntennaPropertyID="24" Label="Antenna" MountID="4" SourceAppElementId="Antenna_24_TME"/>
+		</Antenna>
+		<Antenna ID="25">
+			<AntennaMember ID="25" RefID="25" StartNodeID="49" EndNodeID="50" SectionID="3" AntennaPropertyID="25" Label="Antenna" MountID="4" SourceAppElementId="Antenna_25_PANEL"/>
+		</Antenna>
+		<Antenna ID="26">
+			<AntennaMember ID="26" RefID="26" StartNodeID="51" EndNodeID="52" SectionID="3" AntennaPropertyID="26" Label="Antenna" MountID="4" SourceAppElementId="Antenna_26_TME"/>
+		</Antenna>
+		<Antenna ID="27">
+			<AntennaMember ID="27" RefID="27" StartNodeID="53" EndNodeID="54" SectionID="3" AntennaPropertyID="27" Label="Antenna" MountID="4" SourceAppElementId="Antenna_27_PANEL"/>
+		</Antenna>
+	</Antennas>
+	<MountPipesProperties>
+		<MountPipeProperty ID="1" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegA" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_1"/>
+		<MountPipeProperty ID="2" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegB" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_2"/>
+		<MountPipeProperty ID="3" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegA" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_3"/>
+		<MountPipeProperty ID="4" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegB" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_4"/>
+		<MountPipeProperty ID="5" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegC" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_5"/>
+		<MountPipeProperty ID="6" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegA" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_6"/>
+		<MountPipeProperty ID="7" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegB" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_7"/>
+		<MountPipeProperty ID="8" Label="Pipe2STD" Name="Pipe2STD" Elevation="97.0" Location="LegC" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_8"/>
+		<MountPipeProperty ID="9" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegA" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_9"/>
+		<MountPipeProperty ID="10" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegC" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_10"/>
+		<MountPipeProperty ID="11" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegB" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_11"/>
+		<MountPipeProperty ID="12" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegA" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_12"/>
+		<MountPipeProperty ID="13" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegB" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_13"/>
+		<MountPipeProperty ID="14" Label="Pipe2STD" Name="Pipe2STD" Elevation="82.0" Location="LegC" LateralOffset="0.0" VerticalOffset="0.0" HorizontalOffset="4.0" Height="72.0" OuterDia="2.375" InnerDia="2.067" Weight="21.96" Thickness="0.154" Classification="Existing" MountRefId="xxxxxxxx" AntennaRefId="xxxxxxxxxx" FaceRef="xxxxxxxxxxx" ComponentName="MountPipe" SourceAppElementId="MountPipeProperty_MountPipe_14"/>
+	</MountPipesProperties>
+	<MountPipesNodes>
+		<MountPipeNode ID="1" X="-1.400345187206425" Y="28.6556" Z="0.8107646832036972"/>
+		<MountPipeNode ID="2" X="-1.400345187206425" Y="30.4844" Z="0.8107646832036972"/>
+		<MountPipeNode ID="3" X="0.0" Y="28.6556" Z="-1.611925"/>
+		<MountPipeNode ID="4" X="0.0" Y="30.4844" Z="-1.611925"/>
+		<MountPipeNode ID="5" X="-1.400345187206425" Y="28.6556" Z="0.8107646832036972"/>
+		<MountPipeNode ID="6" X="-1.400345187206425" Y="30.4844" Z="0.8107646832036972"/>
+		<MountPipeNode ID="7" X="0.0" Y="28.6556" Z="-1.611925"/>
+		<MountPipeNode ID="8" X="0.0" Y="30.4844" Z="-1.611925"/>
+		<MountPipeNode ID="9" X="1.400345187206425" Y="28.6556" Z="0.8107646832036972"/>
+		<MountPipeNode ID="10" X="1.400345187206425" Y="30.4844" Z="0.8107646832036972"/>
+		<MountPipeNode ID="11" X="-1.400345187206425" Y="28.6556" Z="0.8107646832036972"/>
+		<MountPipeNode ID="12" X="-1.400345187206425" Y="30.4844" Z="0.8107646832036972"/>
+		<MountPipeNode ID="13" X="0.0" Y="28.6556" Z="-1.611925"/>
+		<MountPipeNode ID="14" X="0.0" Y="30.4844" Z="-1.611925"/>
+		<MountPipeNode ID="15" X="1.400345187206425" Y="28.6556" Z="0.8107646832036972"/>
+		<MountPipeNode ID="16" X="1.400345187206425" Y="30.4844" Z="0.8107646832036972"/>
+		<MountPipeNode ID="17" X="-1.0552350012565084" Y="24.0756" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="18" X="-1.0552350012565084" Y="25.904400000000003" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="19" X="0.0" Y="24.0756" Z="1.2219250000000001"/>
+		<MountPipeNode ID="20" X="0.0" Y="25.904400000000003" Z="1.2219250000000001"/>
+		<MountPipeNode ID="21" X="1.0552350012565084" Y="24.0756" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="22" X="1.0552350012565084" Y="25.904400000000003" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="23" X="-1.0552350012565084" Y="24.0756" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="24" X="-1.0552350012565084" Y="25.904400000000003" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="25" X="1.0552350012565084" Y="24.0756" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="26" X="1.0552350012565084" Y="25.904400000000003" Z="-0.6059558524603817"/>
+		<MountPipeNode ID="27" X="0.0" Y="24.0756" Z="1.2219250000000001"/>
+		<MountPipeNode ID="28" X="0.0" Y="25.904400000000003" Z="1.2219250000000001"/>
+	</MountPipesNodes>
+	<MountPipes>
+		<Mount ID="1">
+			<MountPipeMember ID="1" RefID="1" StartNodeID="1" EndNodeID="2" SectionID="3" MountPipePropertyID="1" Label="MountPipe" MountID="1" SourceAppElementId="MountPipe_1"/>
+			<MountPipeMember ID="3" RefID="3" StartNodeID="5" EndNodeID="6" SectionID="3" MountPipePropertyID="3" Label="MountPipe" MountID="1" SourceAppElementId="MountPipe_3"/>
+			<MountPipeMember ID="6" RefID="6" StartNodeID="11" EndNodeID="12" SectionID="3" MountPipePropertyID="6" Label="MountPipe" MountID="1" SourceAppElementId="MountPipe_6"/>
+		</Mount>
+		<Mount ID="2">
+			<MountPipeMember ID="2" RefID="2" StartNodeID="3" EndNodeID="4" SectionID="3" MountPipePropertyID="2" Label="MountPipe" MountID="2" SourceAppElementId="MountPipe_2"/>
+			<MountPipeMember ID="4" RefID="4" StartNodeID="7" EndNodeID="8" SectionID="3" MountPipePropertyID="4" Label="MountPipe" MountID="2" SourceAppElementId="MountPipe_4"/>
+			<MountPipeMember ID="7" RefID="7" StartNodeID="13" EndNodeID="14" SectionID="3" MountPipePropertyID="7" Label="MountPipe" MountID="2" SourceAppElementId="MountPipe_7"/>
+		</Mount>
+		<Mount ID="3">
+			<MountPipeMember ID="5" RefID="5" StartNodeID="9" EndNodeID="10" SectionID="3" MountPipePropertyID="5" Label="MountPipe" MountID="3" SourceAppElementId="MountPipe_5"/>
+			<MountPipeMember ID="8" RefID="8" StartNodeID="15" EndNodeID="16" SectionID="3" MountPipePropertyID="8" Label="MountPipe" MountID="3" SourceAppElementId="MountPipe_8"/>
+		</Mount>
+		<Mount ID="4">
+			<MountPipeMember ID="9" RefID="9" StartNodeID="17" EndNodeID="18" SectionID="3" MountPipePropertyID="9" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_9"/>
+			<MountPipeMember ID="10" RefID="10" StartNodeID="19" EndNodeID="20" SectionID="3" MountPipePropertyID="10" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_10"/>
+			<MountPipeMember ID="11" RefID="11" StartNodeID="21" EndNodeID="22" SectionID="3" MountPipePropertyID="11" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_11"/>
+			<MountPipeMember ID="12" RefID="12" StartNodeID="23" EndNodeID="24" SectionID="3" MountPipePropertyID="12" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_12"/>
+			<MountPipeMember ID="13" RefID="13" StartNodeID="25" EndNodeID="26" SectionID="3" MountPipePropertyID="13" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_13"/>
+			<MountPipeMember ID="14" RefID="14" StartNodeID="27" EndNodeID="28" SectionID="3" MountPipePropertyID="14" Label="MountPipe" MountID="4" SourceAppElementId="MountPipe_14"/>
+		</Mount>
+	</MountPipes>
+</Staad>

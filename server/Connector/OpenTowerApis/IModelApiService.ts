@@ -183,6 +183,9 @@ export class OpenTowerIModelApiService {
     }
 
     getIModelSeedFileInfo = (accessToken: string, url: string): Promise<any> => {
+        // console.log("inside getIModelSeedFileInfo");
+        // console.log("accessToken: ", accessToken);
+        // console.log("url: ", url)
         return new Promise((resolve: any, reject: any) => {
             try {
 

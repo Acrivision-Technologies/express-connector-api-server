@@ -9,13 +9,23 @@ export const mainExecution = async (fileName: string, iModelName: string, access
     try {
       const towerConnectorExecutionFile = path.join(__dirname, "TowerConnector");
 
+      // console.log("towerConnectorExecutionFile: ", towerConnectorExecutionFile)
+
       // // main executoin
       let connectorArgs: AllArgsProps = JSON.parse(JSON.stringify({...Config.connectorArgs}));
       if(connectorArgs.hubArgs) {
         connectorArgs.hubArgs.projectGuid = iTwinId;
       }
-    
+
+      // console.log("connectorArgs");
+      // console.log(connectorArgs);
+
+
+    // console.log("access_token, ", access_token)
       const runner = ConnectorRunner.fromJSON(connectorArgs, access_token, 'new');
+
+      // console.log('runner');
+      // console.log(runner);
 
       runner.run(towerConnectorExecutionFile, fileName, iModelName)
         .then((iModelGuid: string) => {
